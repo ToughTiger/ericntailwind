@@ -1,0 +1,623 @@
+
+
+.bg-eric {
+    background-color: #020b31;
+}
+.sticky-bar.stick {
+    background-color: #020b31;
+}
+.hero-3{
+    background: linear-gradient(106.42deg, #020b31, #0059b2);
+    padding: 2rem;
+}
+.services_tab{
+    background: rgba(0, 89, 178, 1.0);
+    /* border-top-right-radius: 25%;
+    border-top-left-radius: 25%; */
+    padding: 2rem;
+}
+
+/* eric Hero Menu */
+
+.ericHeroMenu {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+@media screen and (max-width: 768px) {
+    .ericHeroMenu {
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+.ericHeroMenu .ericHeroMenu-flash {
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10vw 10vw rgba(255, 255, 255, .2);
+    pointer-events: none;
+    animation: eric-grow-disappear 1s linear 1.2s both;
+}
+@keyframes eric-grow-disappear {
+    0% {
+      opacity: 0;
+      width:0
+    }
+    50% {
+      opacity: 1;
+
+    }
+    100% {
+      opacity: 0;
+      width:200%
+    }
+  }
+
+.ericHeroMenu__item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ericHeroMenu__item__path g :hover {
+    transform: translate(74.2%, 24.2%);
+    cursor: pointer;
+    
+  }
+
+.ericHeroMenu .ericHeroMenu-flash:after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.ericHeroMenu .menuWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.ericHeroMenu .outerPart .outerCircle {
+    animation: eric-appear .5s linear .2s both;
+}
+a, a:hover {
+    color: #1262b3;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: .1s ease-in;
+}
+@keyframes eric-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  svg {
+    width: auto;
+}
+img, svg {
+    height: auto;
+    max-width: 100%;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+user agent stylesheet
+:not(foreignObject) > svg {
+    transform-origin: 0px 0px;
+}
+  .ericHeroMenu .outerPart .innerBlueSphere {
+    transform: translate(19.5%, 50.1%);
+    animation: eric-appear 0.7s linear 1s both;
+}
+
+.ericHeroMenu .outerPart .innerOrangeSphere {
+    transform: translate(19.5%, 19.2%);
+    animation: eric-appear .7s linear 1s both;
+}
+
+.ericHeroMenu .outerPart .scale {
+    transform: translate(4.04%, 2.4%);
+}
+.ericHeroMenu .outerPart .innerCircle {
+    transform: translate(25.9%, 25.8%);
+    animation: eric-appear 1s linear .2s both;
+    filter: drop-shadow(0 0 5px #000);
+}
+.ericHeroMenu .logoWrapper .logo svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+.ericHeroMenu .logoBg {
+    transform: translate(29.2%, 20.7%);
+    animation: eric-appear .2s linear 1.7s both;
+}
+.ericHeroMenu .logoText {
+    transform: translate(32.5%, 51.1%);
+}
+.ericHeroMenu .innerTitles {
+    transform: translate(23.4%, 23.3%);
+}
+.ericHeroMenu .logoUnderline {
+    transform: translate(37.7%, 59%);
+}
+.ericHeroMenu .logoUnderline-anim {
+    animation: eric-appear-down .5s ease-out 2s both;
+}
+.ericHeroMenu .logoText-anim {
+    animation: eric-appear-up 0.5s ease-out 2s both;
+}
+@keyframes eric-appear-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes eric-appear-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .ericHeroMenu .hoverText {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    fill: #fff;
+    line-height: 1.18;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.ericHeroMenu .hoverTextHolder {
+    overflow: visible;
+}
+.ericHeroMenu .upperSegments {
+    fill: #fff;
+}
+.ericHeroMenu .upperSegments .segment_eln {
+    transform: translate(6.3%, 24.35%);
+}
+.ericHeroMenu .segment_eln {
+    animation: eric-appear .5s ease-out 1.08s both;
+}
+.ericHeroMenu .segment {
+    transition: transform .15s ease-out;
+}
+.ericHeroMenu .upperSegments .segment_inventory {
+    transform: translate(15.1%, 8.65%);
+}
+.ericHeroMenu .segment_inventory {
+    animation: eric-appear .5s ease-out 1.19s both;
+}
+.ericHeroMenu .upperSegments .segment_curves {
+    transform: translate(36.9%, 6.35%);
+}
+.ericHeroMenu .segment_curves {
+    animation: eric-appear .5s ease-out .31s both;
+}
+.ericHeroMenu .upperSegments .segment_ai {
+    transform: translate(59.1%, 8.6%);
+}
+.ericHeroMenu .segment_ai {
+    animation: eric-appear .5s ease-out .42s both;
+}
+.ericHeroMenu .upperSegments .segment_automation {
+    transform: translate(73.3%, 24.6%);
+}
+.ericHeroMenu .segment_automation {
+    animation: eric-appear .5s ease-out .53s both;
+}
+.ericHeroMenu .upperSegments .segment .segmentBg {
+    fill: #3b82f6;
+}
+.ericHeroMenu .upperSegments .segment_automation .icon {
+    transform: translate(-.5%, 5.8%);
+}
+.ericHeroMenu .icon {
+    color: #fff;
+    pointer-events: none;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, .4));
+}
+
+/* Lower segment */
+.ericHeroMenu .lowerSegments {
+    fill: #fff;
+}
+.ericHeroMenu .lowerSegments .segment_registration {
+    transform: translate(6.4%, 50.1%);
+}
+.ericHeroMenu .segment_registration {
+    animation: eric-appear .5s ease-out .97s both;
+}
+
+.ericHeroMenu .lowerSegments .segment_activity {
+    transform: translate(19.3%, 70.2%);
+}
+.ericHeroMenu .segment_activity {
+    animation: eric-appear .5s ease-out .86s both;
+}
+.ericHeroMenu .lowerSegments .segment_visualization {
+    transform: translate(70.4%, 50.1%);
+}
+.ericHeroMenu .segment_visualization {
+    animation: eric-appear .5s ease-out .64s both;
+}
+.ericHeroMenu .lowerSegments .segment .segmentBg {
+    fill: #ea600a;
+}
+.ericHeroMenu .lowerSegments .segment_visualization .icon {
+    transform: translate(-5.8%, 4.4%);
+}
+.ericHeroMenu .icon {
+    color: #fff;
+    pointer-events: none;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, .4));
+}
+.ericHeroMenu .lowerSegments .segment_assay {
+    transform: translate(50.3%, 70.2%);
+}
+.ericHeroMenu .segment_assay {
+    animation: eric-appear .5s ease-out .75s both;
+}
+
+.ericHeroMenu .logoWrapper {
+    width: 112px;
+    height: 112px;
+    transform: translate(43%, 43%);
+}
+.ericHeroMenu #image14_4040_123 {
+    /* width: 112px;
+    height: 112px; */
+    animation: eric-logoTranslate .7s ease-in-out 1s both;
+}
+@keyframes eric-logoTranslate {
+    0% {
+      transform: translateY(0, 0);
+    }
+
+    100% {
+      transform: translateY(-71px);
+    }
+  }
+
+.ericHeroMenu #image14_4040_123 {
+    /* width: 112px;
+    height: 112px; */
+    transform-origin: center;
+    transform-box: border-box;
+    animation: eric-scale 1.7s ease-out both;
+}
+@keyframes eric-scale {
+    20% {
+      opacity: 0.2;
+      transform: scale(0.2);
+    }
+    40% {
+        opacity: 0.4;
+        transform: scale(0.4);
+      }
+    60% {
+      opacity: 0.6;
+      transform: scale(0.6);
+    }
+    78% {
+        opacity: 0.8;
+        transform: scale(0.8);
+      }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+.ericHeroMenu #image14_4040_123 {
+    transform-origin: center;
+    transform-box: border-box;
+    animation: eric-rotate .5s linear 2 both, eric-rotate .7s ease-out 1s;
+}
+@keyframes eric-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+@media (max-width: 768px) {
+.hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+}
+
+.active {
+    background: #172554;
+}
+.bg-footer {
+    background:#f69300;
+   
+}
+
+#Layer_19 image{
+    /* background-color: #e0880d !important; */
+}
+/* .contrast { filter: contrast(160%); }
+.blur { filter: blur(3px); }
+.invert { filter: invert(100%); } */
+
+@keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #Layer_19 {
+    transform-origin: center;
+    animation:ericmenu 0.5s ease-out 1.27s both, rotate360  40s linear infinite;
+   
+  }
+  #tmf :hover {
+    transform: translate(-1.5%, 1.2%);
+  }
+  
+.image-container img {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  
+}
+
+.gif {
+    position:absolute;
+    top: 28%;
+    left: 15%;
+    width: 70%;
+    height: 60%;
+}
+
+@media screen and (max-width: 1580px) {
+    .gif {
+        position:absolute;
+        top: 24%;
+        left: 11%;
+        width: 52%;
+        height: 48%;
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .gif {
+        position:absolute;
+        top: 24%;
+        left: 7%;
+        width: 33%;
+        height: 50%;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .gif {
+        position:absolute;
+        top: 24%;
+        left: 15%;
+        width: 70%;
+        height: 50%;
+    }
+    
+}
+
+/* details {
+    background-color: #f3b661;
+    border: solid 1px #e0880d;
+} */
+
+summary {
+
+	header > svg {
+		transform: scale(1) rotate(0deg);
+		transition: 0.5s;
+	}
+}
+details summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] {
+	transition: 0.5s;
+	transform-origin: center center;
+	transform-box: fill-box;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	summary {
+		header > svg {
+			transform: scale(1) rotate(45deg);
+			transition: 0.5s;
+		}
+
+		header > h1 {
+			font-weight: bold;
+		}
+
+		&::marker {
+			display: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+.content {
+	> p {
+		margin: 1rem 0;
+	}
+}
+details[open] summary ~ * {
+	animation: sweep 0.5s ease-in-out;
+}
+@keyframes sweep {
+	0% {
+		opacity: 0;
+		transform: translateX(-2.5rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.stat-card {
+    position: relative;   
+    height: 200px;
+    padding: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.stat-card:hover {
+    background: #ff4600;
+    padding: 20px;
+}
+
+
+@keyframes ericmenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ericrotate {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: 360;
+    }
+}
+
+.etmf_service {
+    animation: ericmenu 0.5s ease-out 0.31s both;
+}
+.etmf_service:hover {    
+        transform: translate(-0.5%, -0.3%);
+        background-color: #6718e6;
+}
+.medical_writing {
+    animation: ericmenu 0.5s ease-out 0.4s both;
+}
+.medical_writing:hover{
+    transform: translate(-0.5%, -0.3%);
+}
+.data_management {
+    animation: ericmenu 0.5s ease-out 0.48s both;
+}
+.data_management:hover{
+    transform: translate(-0.3%, -0.5%);
+}
+.clinical_data {
+    animation: ericmenu 0.5s ease-out 0.55s both;
+}
+.clinical_data:hover{
+    transform: translate(0.2%, -0.3%);
+}
+.pharmacovigilance {
+    animation: ericmenu 0.5s ease-out 0.63s both;
+}
+.pharmacovigilance:hover{
+    transform: translate(0.2%, -0.3%);
+}
+.biostatistics {
+    animation: ericmenu 0.5s ease-out 0.71s both;
+}
+.biostatistics:hover{
+    transform: translate(0.5%, -0.3%);
+}
+.clinical_op {
+    animation: ericmenu 0.5s ease-out 0.79s both;
+}
+.clinical_op:hover{
+    transform: translate(0.5%, -0.3%);
+}
+.edc {
+    animation: ericmenu 0.5s ease-out 0.87s both;
+}
+.edc:hover{
+    transform: translate(0.2%, 0.3%);
+}
+.ctms {
+    animation: ericmenu 0.5s ease-out 0.95s both;
+}
+.ctms:hover{
+    transform: translate(0.2%, 0.3%);
+}
+.etmf {
+    animation: ericmenu 0.5s ease-out 1.03s both;
+}
+.etmf:hover{
+    transform: translate(-0.3%, 0.5%);
+}
+.iwrs {
+    animation: ericmenu 0.5s ease-out 1.11s both;
+}
+.iwrs:hover{
+    transform: translate(-0.3%, 0.5%);
+}
+.abc {
+    animation: ericmenu 0.5s ease-out 1.19s both;
+}
+.abc:hover{
+    transform: translate(-0.5%, 0.3%);
+}
+
+#SERVICES_Semi_Ciricle {
+    transform-origin: center;
+    animation: ericmenu 0.5s ease-out .79s both;
+}
+#TECHNOLOGY_Semi_Circle {
+    transform-origin: center;
+    animation: ericmenu 0.5s ease-out 1.19s both;
+}
+#Layer_43 {
+    transform-origin: center;
+    animation: eric-scale 1.8s ease-out both, ericmenu 0.5s ease-out 1.28s both;
+}
+
+
+
+
+
+
+
