@@ -18,9 +18,9 @@
 
     <link rel="stylesheet" href="{{ URL::asset('assets/css/normalize.css') }}" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"--}}
+{{--        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="--}}
+{{--        crossorigin="anonymous" referrerpolicy="no-referrer" />--}}
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css?v=2.0') }}" />
 </head>
 
@@ -54,7 +54,7 @@
             </div>
     </section>
     <section class="py-20">
-        <div class="container wow animate__animated animate__fadeIn" data-wow-delay=".3s">
+        <div class="container bg-right-bottom bg-no-repeat bg-center file" style="background-image:url('assets/imgs/elements/blob.svg')">
             <div class="flex flex-wrap mb-12 lg:mb-20 -mx-3 text-center lg:text-left">
                 <div class="w-full lg:w-1/3 px-3 mb-8 lg:mb-0">
                     <img class="h-32 w-32" src="{{URL::asset('assets/imgs/logos/final_black.gif')}}"

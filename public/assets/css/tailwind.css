@@ -60,7 +60,7 @@ nav li.has-child::after {
   width: 4px;
   height: 4px;
   border-radius: 10px;
-  background-color: rgba(148, 163, 184, var(--tw-text-opacity));
+  background-color: #0059b2;
 }
 
 .menu-item {

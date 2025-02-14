@@ -1,6 +1,6 @@
 <x-layout>
   <section class="hero-1">
-    <div class="container bg-right-bottom bg-cover file" style="background-image:url('assets/imgs/elements/blob.svg')">
+    <div class="container bg-right-bottom object-cover file" style="background-image:url('assets/imgs/elements/blob1.svg')">
       <div >
         <h1 class="text-center font-bold text-3xl md:text-md">Eric Clinical Trial Management Software(CTMS)</h1>
       </div>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="flex max-h-max w-full lg:w-1/2  px-3 mb-8 lg:mb-0 mx-auto">
-          <img src="assets/imgs/illustrations/optimized.gif" alt="">
+          <img src="assets/imgs/illustrations/ctms.gif" alt="">
 
         </div>
       </div>

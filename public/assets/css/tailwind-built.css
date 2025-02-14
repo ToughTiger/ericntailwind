@@ -437,14 +437,14 @@ samp {
  *    CSS Remedy, with `svg` added as well.
  *
  *    https://github.com/mozdevs/cssremedy/issues/14
- * 
+ *
  * 2. Add `vertical-align: middle` to align replaced elements more
  *    sensibly by default when overriding `display` by adding a
  *    utility like `inline`.
  *
  *    This can trigger a poorly considered linting error in some
  *    tools but is included by design.
- * 
+ *
  *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 img,
@@ -1706,7 +1706,7 @@ video {
 	--tw-text-opacity: 1;
 	--tw-divide-opacity: 1;
   --tw-border-opacity: 1;
-} 
+}
 /*Common*/
 button:focus {
   border: 0;
@@ -1727,16 +1727,16 @@ nav li.has-child {
   padding-right: 10px;
 }
 
-nav li.has-child::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 4px;
-  height: 4px;
-  border-radius: 10px;
-  background-color: rgba(148, 163, 184, var(--tw-text-opacity));
-}
+/*nav li.has-child::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  right: 0;*/
+/*  top: 50%;*/
+/*  width: 4px;*/
+/*  height: 4px;*/
+/*  border-radius: 10px;*/
+/*  background-color: #0059b2;*/
+/*}*/
 
 .menu-item {
   --tw-border-opacity: 1;

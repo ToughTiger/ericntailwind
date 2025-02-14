@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TechnologyController;
+use App\Http\Controllers\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,22 +19,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/ctms', function () {
-    return view('technology/ctms');
-});
-Route::get('/edc', function () {
-    return view('technology/edc');
-});
-Route::get('/irt', function () {
-    return view('technology/irt');
-});
-Route::get('/etmf_tech', function () {
-    return view('technology/etmf');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Technology routes
+route::get('/edc',[TechnologyController::class,'edc']);
+Route::get('/etmf_tech',[TechnologyController::class,'etmf_tech']);
+Route::get('/ctms',[TechnologyController::class,'ctms']);
+Route::get('/irt',[TechnologyController::class,'irt']);
+
+// Services routes
+
+Route::get('/clinical_operation',[ServicesController::class,'clinical_operation']);
+Route::get('/biostatistics',[ServicesController::class,'biostatistics']);
+Route::get('/clinical_data',[ServicesController::class,'clinical_data']);
+Route::get('/data_management',[ServicesController::class,'data_management']);
+Route::get('/medical_writing',[ServicesController::class,'medical_writing']);
+Route::get('/pharmacovigilance',[ServicesController::class,'pharmacovigilance']);
+Route::get('/etmf',[ServicesController::class,'etmf']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -41,7 +49,4 @@ Route::middleware('auth')->group(function () {
 });
 
 
-require __DIR__.'/auth.php';
-
-
-
+require __DIR__ . '/auth.php';
