@@ -10,8 +10,8 @@
                         <span class="text-blue-500">ERIC Pharmacovigilance:</span>
                         <span>Meeting Your Pharmacovigilance and Drug Safety Needs. </span>
                     </h2>
-                    <p class="mb-8 text-xl text-blueGray-400 wow animate__animated animate__fadeInUp text-left" data-wow-delay=".3s">ERIC delivers tailored solutions to address your evolving pharmacovigilance and drug safety challenges. Through well-defined processes and seamless integration of data from diverse sources, we ensure robust safety monitoring.</p>
-                    <p class="mb-8 text-xl text-blueGray-400 wow animate__animated animate__fadeInUp text-left" data-wow-delay=".5s">By combining advanced technology with expert resources, we enhance efficiency, maintain compliance with stringent regulatory standards, and safeguard patient well-being.</p>
+                    <p class="mb-8 leading-loose text-blueGray-600 wow animate__animated animate__fadeInUp text-left" data-wow-delay=".3s">ERIC delivers tailored solutions to address your evolving pharmacovigilance and drug safety challenges. Through well-defined processes and seamless integration of data from diverse sources, we ensure robust safety monitoring.</p>
+                    <p class="mb-8 leading-loose text-blueGray-600 wow animate__animated animate__fadeInUp text-left" data-wow-delay=".5s">By combining advanced technology with expert resources, we enhance efficiency, maintain compliance with stringent regulatory standards, and safeguard patient well-being.</p>
                     <div
                         class="p-8 bg-transparent rounded-lg flex justify-center items-center flex-wrap max-w-md mx-auto wow animate__animated animate__fadeInUp"
                         data-wow-delay=".5s">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="px-4">
                                 <h3 class="my-4 text-xl font-semibold">Efficient Case Processing and Reporting</h3>
-                                <p class="text-blueGray-400 leading-loose">We specialize in streamlined case processing and accurate reporting, ensuring timely and precise handling of safety data. Our robust systems and expert oversight enhance compliance, improve efficiency, and support proactive risk management in pharmacovigilance.</p>
+                                <p class="text-blueGray-600 leading-loose">We specialize in streamlined case processing and accurate reporting, ensuring timely and precise handling of safety data. Our robust systems and expert oversight enhance compliance, improve efficiency, and support proactive risk management in pharmacovigilance.</p>
                             </div>
                         </li>
                         <li class="flex -mx-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
@@ -49,7 +49,7 @@
                             </div>
                             <div class="px-4">
                                 <h3 class="my-4 text-xl font-semibold">Comprehensive Serious Adverse Event (SAE) Management</h3>
-                                <p class="text-blueGray-400 leading-loose">We provide end-to-end Serious Adverse Event (SAE) management, ensuring timely detection, accurate reporting, and effective resolution. Our systematic approach enhances patient safety, maintains regulatory compliance, and supports robust risk management throughout the clinical trial process.
+                                <p class="text-blueGray-600 leading-loose">We provide end-to-end Serious Adverse Event (SAE) management, ensuring timely detection, accurate reporting, and effective resolution. Our systematic approach enhances patient safety, maintains regulatory compliance, and supports robust risk management throughout the clinical trial process.
 
                                 </p>
                             </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="px-4 mb-8">
                                 <h3 class="my-4 text-xl font-semibold">Proactive Signal Management</h3>
-                                <p class="text-blueGray-400 leading-loose">We offer advanced signal management solutions designed to detect, assess, and mitigate potential safety signals early. Our systematic approach ensures timely identification of risks, supports data-driven decision-making, and maintains compliance with regulatory requirements, safeguarding patient safety throughout the product lifecycle.</p>
+                                <p class="text-blueGray-600 leading-loose">We offer advanced signal management solutions designed to detect, assess, and mitigate potential safety signals early. Our systematic approach ensures timely identification of risks, supports data-driven decision-making, and maintains compliance with regulatory requirements, safeguarding patient safety throughout the product lifecycle.</p>
                             </div>
                         </li>
                     </ul>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="px-4">
                                 <h3 class="my-4 text-xl font-semibold">Expert Contributions to Safety Sections of Clinical Study Reports</h3>
-                                <p class="text-blueGray-400 leading-loose">We provide specialized expertise in developing and reviewing safety sections for clinical study reports. Our meticulous approach ensures accurate, comprehensive, and regulatory-compliant documentation, highlighting critical safety data and supporting informed decision-making for your clinical trials.</p>
+                                <p class="text-blueGray-600 leading-loose">We provide specialized expertise in developing and reviewing safety sections for clinical study reports. Our meticulous approach ensures accurate, comprehensive, and regulatory-compliant documentation, highlighting critical safety data and supporting informed decision-making for your clinical trials.</p>
                             </div>
                         </li>
                         <li class="flex -mx-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
@@ -82,7 +82,7 @@
                             </div>
                             <div class="px-4 mb-4">
                                 <h3 class="my-4 text-xl font-semibold">Streamlined Preparation and Submission of Drug Safety Update Reports (DSURs)</h3>
-                                <p class="text-blueGray-400 leading-loose">We specialize in the efficient preparation and timely submission of Drug Safety Update Reports (DSURs), ensuring compliance with regulatory requirements. Our expert team delivers accurate, comprehensive, and well-organized reports, providing a clear overview of safety data and supporting ongoing risk-benefit assessments.
+                                <p class="text-blueGray-600 leading-loose">We specialize in the efficient preparation and timely submission of Drug Safety Update Reports (DSURs), ensuring compliance with regulatory requirements. Our expert team delivers accurate, comprehensive, and well-organized reports, providing a clear overview of safety data and supporting ongoing risk-benefit assessments.
 
                                 </p>
                             </div>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="px-4 mb-4">
                                 <h3 class="my-4 text-xl font-semibold">Strategic Risk Management Planning and Implementation</h3>
-                                <p class="text-blueGray-400 leading-loose">We offer end-to-end risk management solutions, from meticulous planning to seamless implementation. Our proactive approach identifies, assesses, and mitigates potential risks, ensuring patient safety, regulatory compliance, and the successful execution of your clinical trials.
+                                <p class="text-blueGray-600 leading-loose">We offer end-to-end risk management solutions, from meticulous planning to seamless implementation. Our proactive approach identifies, assesses, and mitigates potential risks, ensuring patient safety, regulatory compliance, and the successful execution of your clinical trials.
 
                                 </p>
                             </div>

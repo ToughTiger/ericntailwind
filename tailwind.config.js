@@ -9,7 +9,9 @@ export default {
         './resources/views/**/*.blade.php',
        
     ],
-   
+    options: {
+        safelist: ['sm:flex-col-reverse'], // Safelist the class
+      },
 
     theme: {
         extend: {
@@ -17,6 +19,12 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
+        screens: {
+            sm: '640px', // Ensure the 'sm' breakpoint is defined
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+          },
     },
 
     plugins: [forms],

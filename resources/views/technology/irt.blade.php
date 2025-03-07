@@ -11,14 +11,13 @@
             <span class="text-blue-500">Randomization</span> <span class="text-black">and</span> <span
               class="text-blue-500">Trial Supply Management</span>
           </h2>
-          <p class="mb-8 text-blueGray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">ERIC
+          <p class="mb-4 leading-loose text-blueGray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">ERIC
             Interactive Response Technology (IRT), offers Interactive Web Response System.</p>
-          <p class="mb-8 text-blueGray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">It is a full
+          <p class="mb-4 leading-loose text-blueGray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">It is a full
             fledged RTSM (Randomization and Trial Supply Management) solution that tracks your product throughout the
             entire clinical trial (including dispensing!). The IWRS can be used in any type of clinical trial, including
             medical devices. As a simple tool that serves the purpose of randomize patients, it is a cost-effective
-            alternative that can be used independently or in integration with EDC. The optional stock management module
-            can be used to manage the location of the clinical trial medication or medical device.</p>
+            alternative that can be used independently or in integration with EDC.</p>
           <div
             class="p-8 bg-transparent rounded-lg flex justify-center items-center flex-wrap max-w-md mx-auto wow animate__animated animate__fadeInUp"
             data-wow-delay=".5s">
@@ -28,7 +27,7 @@
           </div>
         </div>
         <div class="flex max-h-max w-full lg:w-1/2  px-3 mb-8 lg:mb-0 mx-auto">
-          <img src="assets/imgs/illustrations/optimized.gif" alt="">
+          <img src="assets/imgs/illustrations/iwrs.gif" alt="Eric IWRS">
 
         </div>
       </div>
@@ -239,8 +238,8 @@
                     <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 " id="profile" role="tabpanel"
                       aria-labelledby="profile-tab">
                       <h2 class=" py-6 text-white text-2xl uppercase font-bold">IWRS-Interactive Web Response System</h2>
-                      <p class="text-white dark:text-gray-400 text-sm">Simple and intutive. The IWRS will allow subjects to be enrolled in your clinical trial 24/7 at an affordable price.</p>
-                      <p class="text-white dark:text-gray-400 text-sm mt-3">The IWRS can also communicate with other systems automatically including our ETC system , allow you to use ITClinical's IWRS tool independently while maintaining a communication with an external vendor's tool</p>
+                      <p class="text-white leading-loose dark:text-gray-600 text-sm">Simple and intutive. The IWRS will allow subjects to be enrolled in your clinical trial 24/7 at an affordable price.</p>
+                      <p class="text-white leading-loose dark:text-gray-600 text-sm mt-3">The IWRS can also communicate with other systems automatically including our ETC system , allow you to use ITClinical's IWRS tool independently while maintaining a communication with an external vendor's tool</p>
 
                       <div class="lists mt-6">
                         <ul class="space-y-3">
@@ -352,8 +351,8 @@
                     <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="dashboard" role="tabpanel"
                       aria-labelledby="dashboard-tab">
                       <h2 class=" py-6 text-white text-2xl uppercase font-bold">Stock Management</h2>
-                      <p class="text-white dark:text-gray-400 text-sm">The stock management is an optional module that allows you to register and track the trial stock by registering movement (Shipments and returns) and see movement history in the locations involved in the clinical trial( Global and regional depots and investigational sites.</p>
-                      <p class="text-white dark:text-gray-400 text-sm mt-3">Optional features within this module include the registration of orders to manufactures, shipments/return PDF forms and location re-supply triggers.</p>
+                      <p class="text-white leading-loose dark:text-gray-600 text-sm">The stock management is an optional module that allows you to register and track the trial stock by registering movement (Shipments and returns) and see movement history in the locations involved in the clinical trial( Global and regional depots and investigational sites.</p>
+                      <p class="text-white leading-loose dark:text-gray-600 text-sm mt-3">Optional features within this module include the registration of orders to manufactures, shipments/return PDF forms and location re-supply triggers.</p>
                       <div class="lists mt-6">
                 <ul class="space-y-3">
                   <li class="text-white dark:text-dark-6 flex text-base">
@@ -404,8 +403,8 @@
                     <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel"
                       aria-labelledby="settings-tab">
                       <h2 class=" py-6 text-white text-2xl uppercase font-bold">Regulatory Compliance</h2>
-                      <p class="text-white dark:text-gray-400 text-sm">By complying with regulatory requirements of electronic systems, it replaces paper based records which greatly assists you to access the product information and records a long time after the trial is closed while avoiding manual searches.</p>
-                      <p class="text-white dark:text-gray-400 text-sm mt-3">A flexible authentication and authorization system allows restricting access to the system and to the functionalities each user can perform.</p>
+                      <p class="text-white leading-loose dark:text-gray-600 text-sm">By complying with regulatory requirements of electronic systems, it replaces paper based records which greatly assists you to access the product information and records a long time after the trial is closed while avoiding manual searches.</p>
+                      <p class="text-white leading-loose dark:text-gray-600 text-sm mt-3">A flexible authentication and authorization system allows restricting access to the system and to the functionalities each user can perform.</p>
 
                       <div class="lists mt-6">
                         <ul class="space-y-3">

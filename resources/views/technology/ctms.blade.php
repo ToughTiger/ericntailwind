@@ -1,7 +1,7 @@
 <x-layout>
   <section class="hero-1">
-    <div class="container bg-right-bottom object-cover file" style="background-image:url('assets/imgs/elements/blob1.svg')">
-      <div >
+    <div class="container bg-right-bottom object-cover file" style="background-image:url('assets/imgs/elements/blob.svg')">
+      <div class="heading">
         <h1 class="text-center font-bold text-3xl md:text-md">Eric Clinical Trial Management Software(CTMS)</h1>
       </div>
       <div class="lg:flex mb-12 lg:mb-20 mx-3 sm:flex-col-reverse text-center lg:text-left">
@@ -10,15 +10,15 @@
             <span>Scalable and Cost Effective</span>
             <span class="text-blue-500"> Clinical Study Solutions</span>
           </h2>
-          <p class="mb-8 text-blueGray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">ERIC CTMS is
+          <p class="mb-4 leading-loose text-blueGray-600 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">ERIC CTMS is
             designed to provide the benefits of a Clinical Trial Management System (CTMS) without the substantial
             upfront financial and resource commitments typical of traditional enterprise systems or the inefficiencies
             inherent in spreadsheet trackers..</p>
-          <p class="mb-8 text-blueGray-400 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">ERIC CTMS
+          <p class="mb-4 leading-loose text-blueGray-600 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">ERIC CTMS
             offers drug developers a scalable and cost-effective solution to enhance management, performance, and reduce
             study startup costs in clinical trials.</p>
           <div
-            class="p-8 bg-transparent rounded-lg flex justify-center items-center flex-wrap max-w-md mx-auto wow animate__animated animate__fadeInUp"
+            class="p-8 leading-loose bg-transparent rounded-lg flex justify-center items-center flex-wrap max-w-md mx-auto wow animate__animated animate__fadeInUp"
             data-wow-delay=".5s">
             <a href=""
               class="w-full md:w-auto py-4 px-8 text-white font-bold leading-none bg-blue-500 hover:bg-blue-700 rounded-full"
@@ -30,11 +30,12 @@
 
         </div>
       </div>
+    </div>
   </section>
   <section class="py-20 services_tab">
-    <div class="container ">   
+    <div class="container ">
       <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
-        <div class="w-full lg:pr-20 lg:pt-4 order-1 lg:order-0">          
+        <div class="w-full lg:pr-20 lg:pt-4 order-1 lg:order-0">
           <div class='card p-4  rounded-lg shadow-xl'>
             <h3 class='px-4 py-8 text-white text-2xl uppercase font-bold text-center'>Features</h3>
             <div>
@@ -53,7 +54,7 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc ml-8 px-4'>
                       <li class="ml-8">Provides consolidated views across studies with data import support for investigators, sites, and contacts.</li>
                       <li>Offers calendar visibility for events scheduled within each study and by team members.</li>
@@ -63,8 +64,8 @@
                       <li>The outsourcing tab offers a straightforward yet comprehensive overview of study components, identifying external vendors by task, country, and primary point of contact.</li>
                       <li>Milestone management allows complete customization of key dates for study progress and events.</li>
                     </ul>
-                    
-                      <p></p>
+
+                    <p></p>
                   </div>
                 </details>
               </div>
@@ -83,7 +84,7 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Manage key milestones and target site/enrollment metrics for each study country compared with overall study milestones</li>
                       <li>Enrollment planning by country for target screening and enrollment as well as counts for actuals compared with subject screening and enrollment data.</li>
@@ -109,7 +110,7 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Site contact management including primary, alternate and site-specific details.</li>
                       <li>Oversight of site selection and participation status across sites.</li>
@@ -137,7 +138,7 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Manage key milestones and target site/enrollment metrics for each study country compared with overall study milestones.</li>
                       <li>Enrollment planning by country for target screening and enrollment as well as counts for actuals compared with subject screening and enrollment data.</li>
@@ -163,7 +164,7 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Team roster with CRA-site assignments, start/stop dates on project, roles and titles.</li>
                       <li>Ability for authorized users to trigger team member account invitations.</li>
@@ -190,7 +191,7 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Fully integrated site visit calendar for CRA visit planning and insight into visit report authoring progress.</li>
                       <li>eVisit Report (EVR) authoring and approval features directly in the system.</li>
@@ -218,14 +219,14 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Define and plan submission timelines by country for up to 3 regulatory agencies and submission content.</li>
                       <li>Track expected regulatory agency approvals by country per defined submission timelines and submission actuals.</li>
                       <li>Define essential document package details by document including country-specific items and desired document numbering and folder structures.</li>
                       <li>View uploaded site essential document files in organized file folder structures per definitions.</li>
                       <li>File upload and tracking support for IND Safety reports, agency submission tracking and repositories for standard forms and progress reports.</li>
-                      
+
                     </ul>
                   </div>
                 </details>
@@ -245,22 +246,22 @@
                       </h1>
                     </header>
                   </summary>
-                  <div class='content ml-10 text-sm sm:text-xs text-white'>
+                  <div class='content ml-10 leading-loose text-white'>
                     <ul class='list-disc p-4'>
                       <li>Repositories: Limited access repositories throughout functional areas for files uploaded and content created within the application.</li>
                       <li>Reports and Dashboards: SimpleCTMS supports a flexible reporting interface and dashboards to provide data summaries, charts and visualizations, and checklists. Ad hoc reports supported.</li>
                       <li>Study Document bundle: Download all study level documents as a zip file with established folder structure.</li>
-                      <li>Data Export: Data exports allow download or email delivery of tracking views in common formats.</li>  
+                      <li>Data Export: Data exports allow download or email delivery of tracking views in common formats.</li>
                     </ul>
                   </div>
                 </details>
               </div>
             </div>
           </div>
-       
+
+        </div>
+
       </div>
-      
-    </div>
   </section>
 
 

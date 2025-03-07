@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\FeaturedController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TechnologyController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +18,20 @@ use App\Http\Controllers\ServicesController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/team', function () {
+    return view('about/team');
+});
+Route::get('/about', function () {
+    return view('about/eric');
 });
 
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
+// Index controller
+// Route::get('/',[IndexController::class,'blog']);
+Route::get('/',[FeaturedController::class,'index']);
 //Technology routes
 route::get('/edc',[TechnologyController::class,'edc']);
 Route::get('/etmf_tech',[TechnologyController::class,'etmf_tech']);
@@ -41,6 +48,16 @@ Route::get('/medical_writing',[ServicesController::class,'medical_writing']);
 Route::get('/pharmacovigilance',[ServicesController::class,'pharmacovigilance']);
 Route::get('/etmf',[ServicesController::class,'etmf']);
 
+// therapy routes
+Route::get('/oncology', function () {
+    return view('therapeutics/oncology');
+});
+Route::get('/neurology', function () {
+    return view('therapeutics/neurology');
+});
+Route::get('/infectious', function () {
+    return view('therapeutics/infectious');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

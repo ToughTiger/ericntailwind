@@ -469,6 +469,11 @@ details[open] summary ~ * {
 
 }
 
+.small-gear {
+  transform-origin: center;
+  animation: rotate360  10s linear infinite;
+
+}
 .clinical_op {
     animation: ericmenu 0.5s ease-out 0.16s both;
 }
@@ -931,3 +936,207 @@ details[open] summary ~ * {
     border: 0;
     white-space: nowrap;
   }
+
+
+  /* timeline */
+  :root {
+    --white: #ffffff;
+    --sd_grey: #4a4a4a;
+    --sd_grey-light: #f7f7f7;
+  }
+  
+  /* <MEDIA RESPONSIVE> */
+  @media screen and (max-width: 425px) {
+    /* Small devices (landscape phones, 576px and up) */
+  }
+  
+  @media screen and (min-width: 576px) {
+    /* Small devices (landscape phones, 576px and up) */
+  }
+  
+  @media screen and (min-width: 768px) {
+    /* Medium devices (tablets, 768px and up) */
+  }
+  
+  @media screen and (min-width: 992px) {
+    /* Large devices (desktops, 992px and up) */
+  }
+  
+  @media screen and (min-width: 1200px) {
+    /* Extra large devices (large desktops, 1200px and up) */
+  }
+  /* </MEDIA RESPONSIVE> */
+  
+  .grey_light-block {
+    background-color: var(--sd_grey-light);
+  }
+  
+  .timeline {
+    position: relative;
+    background-image: linear-gradient(to bottom, #930054, #983279, #97519b, #926db8, #8b87d0, #7096df, #4ca4e9, #00b1ec, #00b6db, #00b7b2, #00b376, #2aab29);
+    width: 50px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline {
+      margin: 0 0 0 20px;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .timeline {
+      margin: 0 auto;
+    }
+  }
+  
+  .timeline .point .year {
+    padding-top: 10px;
+    color: var(--white);
+  }
+  
+  .timeline .point .bocata {
+    position: relative;
+    background-color: var(--white);
+    padding: 20px;
+    transition: all 0.3s;
+  }
+  
+  @media screen and (max-width: 425px) {
+    .timeline .point .bocata {
+      width: 180px;
+    }
+    .timeline .point .bocata.little {
+      width: 180px;
+    }
+  }
+  
+  @media screen and (min-width: 426px) and (max-width: 576px) {
+    .timeline .point .bocata {
+      width: 250px;
+    }
+    .timeline .point .bocata.little {
+      width: 250px;
+    }
+  }
+  
+  @media screen and (min-width: 577px) {
+    .timeline .point .bocata {
+      width: 400px;
+    }
+    .timeline .point .bocata.little {
+      width: 250px;
+    }
+  }
+  
+  .timeline .point .bocata + .bocata {
+    margin-top: 35px;
+  }
+  
+  .timeline .point:nth-child(odd) .bocata {
+    box-shadow: -6px 10px 20px -20px var(--sd_grey);
+    left: 100px;
+    position: relative;
+  }
+  
+  .timeline .point:nth-child(odd) .bocata::after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin-left: -10px;
+    left: 50%;
+    border-bottom: 10px solid var(--white);
+    top: -10px;
+  }
+  
+  .timeline .point:nth-child(even) .bocata {
+    box-shadow: 6px 10px 20px -20px var(--sd_grey);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline .point:nth-child(even) .bocata {
+      left: 100px;
+    }
+    .timeline .point:nth-child(even) .bocata::after {
+      content: '';
+      width: 0;
+      height: 0;
+      display: block;
+      position: absolute;
+      z-index: 10;
+      border: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      margin-left: -10px;
+      left: 50%;
+      border-bottom: 10px solid var(--white);
+      top: -10px;
+    }
+  }
+  
+  @media screen and (min-width: 769px) {
+    .timeline .point:nth-child(even) .bocata {
+      right: 425px;
+    }
+    .timeline .point:nth-child(even) .bocata.little {
+      right: 275px;
+    }
+    .timeline .point:nth-child(even) .bocata::after {
+      content: '';
+      width: 0;
+      height: 0;
+      display: block;
+      position: absolute;
+      z-index: 10;
+      border: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      margin-top: -10px;
+      top: 50%;
+      border-left: 10px solid var(--white);
+      left: auto;
+      right: -10px;
+    }
+  }
+  
+  .timeline .point .arrow {
+    border: solid var(--sd_grey-light);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+   
+  }
+  
+  .timeline .point:first-child .arrow,
+  .timeline .point:last-child .arrow {
+    border: solid var(--sd_grey-light);
+    border-width: 0 12px 12px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(45deg);
+  }
+  
+  .timeline .point .arrow-clean {
+    border: solid var(--sd_grey-light);
+    border-width: 0 20px 20px 0;
+    display: inline-block;
+    padding: 20px;
+    position: absolute;
+    left: -5px;
+    bottom: -13px;
+    transform: rotate(45deg);
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1.28px;
+  }
+
+ 

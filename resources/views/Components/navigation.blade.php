@@ -31,16 +31,16 @@
                                 <a class="text-sm font-semibold text-white hover:text-blueGray-500" href="#">Therapeutics</a>
                                 <ul class="drop-down-menu min-w-200">
                                     <li>
-                                        <a href="#" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Oncology</a>
+                                        <a href="/oncology" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Oncology</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Neuroscience</a>
+                                        <a href="/neurology" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Neurology</a>
                                     </li>
                                     <li>
                                         <a href="#" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">General Medicine</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Infectious Disease & Vaccines</a>
+                                        <a href="/infectious" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Infectious Disease & Vaccines</a>
                                     </li>
                                     <li>
                                         <a href="#" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Inflammation & Immunology</a>
@@ -174,7 +174,7 @@
                                 <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="/">Solutions</a>
                                 <ul class="dropdown pl-5">
                                     <li>
-                                        <a href="/clinical_opration" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Clinical Operation & Project Management</a>
+                                        <a href="/clinical_operation" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Clinical Operation & Project Management</a>
                                     </li>
                                     <li>
                                         <a href="/biostatistics" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Biostatistics</a>

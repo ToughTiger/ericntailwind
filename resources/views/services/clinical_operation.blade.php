@@ -5,13 +5,13 @@
         <h1 class="text-center  font-bold text-4xl md:text-md">Clinical Operation & Project Management</h1>
       </div>
       <div class="lg:flex mb-12 lg:mb-20 mx-3 sm:flex-col-reverse text-center lg:text-left hero-container">
-        <div class="text lg:w-1/2 px-3 lg:mt-32">
+        <div class="text lg:w-1/2 px-3 mt-32">
           <!-- <h2 class="mb-4 text-2xl lg:text-2xl font-bold font-heading wow animate__animated animate__fadeInUp">
             <span>Services We </span>
             <span class="text-blue-500"> Offer</span>
           </h2> -->
-          <p class="mb-8 text-blueGray-400 text-xl wow animate__animated animate__fadeInUp text-left sm:text-justify" data-wow-delay=".3s" data-translate data-key="ctms-desc1">Our core strength lies in project management, supported by comprehensive and consistent processes that meet global regulatory standards.</p>
-          <p class="mb-8 text-blueGray-400 text-xl wow animate__animated animate__fadeInUp text-left" data-wow-delay=".5s" data-translate data-key="ctms-desc2">At Eric Solutions, we combine services and systems to deliver tailored solutions with faster timelines and cost-effective results, ensuring exceptional value for our clients.</p>
+          <p class="mb-8 text-blueGray-600 leading-loose wow animate__animated animate__fadeInUp text-left sm:text-justify" data-wow-delay=".3s" data-translate data-key="ctms-desc1">Our core strength lies in project management, supported by comprehensive and consistent processes that meet global regulatory standards.</p>
+          <p class="mb-8 text-blueGray-600 leading-loose wow animate__animated animate__fadeInUp text-left" data-wow-delay=".5s" data-translate data-key="ctms-desc2">At Eric Solutions, we combine services and systems to deliver tailored solutions with faster timelines and cost-effective results, ensuring exceptional value for our clients.</p>
           <div
             class="p-8 bg-transparent rounded-lg flex justify-center items-center flex-wrap max-w-md mx-auto wow animate__animated animate__fadeInUp"
             data-wow-delay=".5s">
@@ -40,7 +40,7 @@
               </div>
               <div class="px-4">
                 <h3 class="my-4 text-xl font-semibold">Expert Project Management for Clinical Development Programs</h3>
-                <p class="text-blueGray-400 leading-loose">We specialize in the seamless management of clinical development programs, ensuring precision, compliance, and efficiency at every stage. Our expertise drives successful outcomes while adhering to global standards and timelines.</p>
+                <p class="text-blueGray-600 leading-loose">We specialize in the seamless management of clinical development programs, ensuring precision, compliance, and efficiency at every stage. Our expertise drives successful outcomes while adhering to global standards and timelines.</p>
               </div>
             </li>
             <li class="flex -mx-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
@@ -49,7 +49,7 @@
               </div>
               <div class="px-4">
                 <h3 class="my-4 text-xl font-semibold">Quality Clinical Monitoring: On-Site, Remote, and Centralized</h3>
-                <p class="text-blueGray-400 leading-loose">Eric Solutions delivers exceptional clinical monitoring solutions, offering flexibility through on-site, remote, and centralized approaches. As part of our commitment to innovation, we provide a cutting-edge remote monitoring platform designed to support decentralized clinical trials, ensuring efficiency, compliance, and seamless data management.</p>
+                <p class="text-blueGray-600 leading-loose">Eric Solutions delivers exceptional clinical monitoring solutions, offering flexibility through on-site, remote, and centralized approaches. As part of our commitment to innovation, we provide a cutting-edge remote monitoring platform designed to support decentralized clinical trials, ensuring efficiency, compliance, and seamless data management.</p>
               </div>
             </li>
             <li class="flex -mx-4 wow animate__animated animate__fadeInUp " data-wow-delay=".7s">
@@ -58,7 +58,7 @@
               </div>
               <div class="px-4 mb-8">
                 <h3 class="my-4 text-xl font-semibold">Optimized Resourcing for Maximum Efficiency</h3>
-                <p class="text-blueGray-400 leading-loose">We specialize in delivering optimized resourcing strategies tailored to your needs, ensuring the right talent and tools are in place to drive efficiency, reduce costs, and achieve exceptional results.</p>
+                <p class="text-blueGray-600 leading-loose">We specialize in delivering optimized resourcing strategies tailored to your needs, ensuring the right talent and tools are in place to drive efficiency, reduce costs, and achieve exceptional results.</p>
               </div>
             </li>
           </ul>
@@ -71,7 +71,7 @@
               </div>
               <div class="px-4">
                 <h3 class="my-4 text-xl font-semibold">Smart Study Start-Up: Streamlined Site Onboarding and Regulatory Approvals</h3>
-                <p class="text-blueGray-400 leading-loose">Our smart study start-up approach ensures optimized site onboarding and accelerated regulatory approvals, reducing delays and enhancing efficiency. By leveraging proven strategies and innovative tools, we help you kick off clinical trials faster and with greater confidence.</p>
+                <p class="text-blueGray-600 leading-loose">Our smart study start-up approach ensures optimized site onboarding and accelerated regulatory approvals, reducing delays and enhancing efficiency. By leveraging proven strategies and innovative tools, we help you kick off clinical trials faster and with greater confidence.</p>
               </div>
             </li>
             <li class="flex -mx-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
@@ -80,7 +80,7 @@
               </div>
               <div class="px-4 mb-4">
                 <h3 class="my-4 text-xl font-semibold">Site and Patient Solutions: Enhancing Recruitment and Engagement</h3>
-                <p class="text-blueGray-400 leading-loose">Eric Solutions specializes in innovative site and patient solutions, focusing on effective recruitment and meaningful patient engagement. Through strategic partnerships with leading site networks, we ensure seamless trial execution and improved patient participation, driving successful clinical outcomes.
+                <p class="text-blueGray-600 leading-loose">Eric Solutions specializes in innovative site and patient solutions, focusing on effective recruitment and meaningful patient engagement. Through strategic partnerships with leading site networks, we ensure seamless trial execution and improved patient participation, driving successful clinical outcomes.
 
                 </p>
               </div>

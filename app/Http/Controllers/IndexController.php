@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class IndexController extends Controller
 {
@@ -53,4 +54,13 @@ public function gdpr(){
         $metaDescription = '';
         return view('aitech/protocol');
     }
+    // public function blog(){
+    //     $posts = Post::orderBy('created_at', 'desc')
+    //     ->limit(3)
+    //     ->with(['categories', 'tags'])
+    //     ->where('is_published', '=', 1)
+    //     ->get();
+    //     dd($posts);
+    //  return view('index', ['posts' => $posts]);
+    // }
 }

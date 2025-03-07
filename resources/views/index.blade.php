@@ -14,8 +14,13 @@
               maximize operations management with digitization</p>
           </div>
           <div class="text-center lg:text-left">
-            <a class="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-400 hover:bg-blue-700 rounded wow animate__animated animate__fadeInUp"
-              href="#key-features">Book Free Demo</a>
+            <a class="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-800 hover:bg-blue-700 rounded wow animate__animated animate__fadeInUp"
+              href="#key-features"> <svg class="h-6 w-6 inline mr-3" viewBox="0 0 24 24" fill="#020b31"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.1007 13.359L15.5719 12.8272H15.5719L16.1007 13.359ZM16.5562 12.9062L17.085 13.438H17.085L16.5562 12.9062ZM18.9728 12.5894L18.6146 13.2483L18.9728 12.5894ZM20.8833 13.628L20.5251 14.2869L20.8833 13.628ZM21.4217 16.883L21.9505 17.4148L21.4217 16.883ZM20.0011 18.2954L19.4723 17.7636L20.0011 18.2954ZM18.6763 18.9651L18.7459 19.7119H18.7459L18.6763 18.9651ZM8.81536 14.7266L9.34418 14.1947L8.81536 14.7266ZM4.00289 5.74561L3.2541 5.78816L3.2541 5.78816L4.00289 5.74561ZM10.4775 7.19738L11.0063 7.72922H11.0063L10.4775 7.19738ZM10.6342 4.54348L11.2346 4.09401L10.6342 4.54348ZM9.37326 2.85908L8.77286 3.30855V3.30855L9.37326 2.85908ZM6.26145 2.57483L6.79027 3.10667H6.79027L6.26145 2.57483ZM4.69185 4.13552L4.16303 3.60368H4.16303L4.69185 4.13552ZM12.0631 11.4972L12.5919 10.9654L12.0631 11.4972ZM16.6295 13.8909L17.085 13.438L16.0273 12.3743L15.5719 12.8272L16.6295 13.8909ZM18.6146 13.2483L20.5251 14.2869L21.2415 12.9691L19.331 11.9305L18.6146 13.2483ZM20.8929 16.3511L19.4723 17.7636L20.5299 18.8273L21.9505 17.4148L20.8929 16.3511ZM18.6067 18.2184C17.1568 18.3535 13.4056 18.2331 9.34418 14.1947L8.28654 15.2584C12.7186 19.6653 16.9369 19.8805 18.7459 19.7119L18.6067 18.2184ZM9.34418 14.1947C5.4728 10.3453 4.83151 7.10765 4.75168 5.70305L3.2541 5.78816C3.35456 7.55599 4.14863 11.144 8.28654 15.2584L9.34418 14.1947ZM10.7195 8.01441L11.0063 7.72922L9.9487 6.66555L9.66189 6.95073L10.7195 8.01441ZM11.2346 4.09401L9.97365 2.40961L8.77286 3.30855L10.0338 4.99296L11.2346 4.09401ZM5.73263 2.04299L4.16303 3.60368L5.22067 4.66736L6.79027 3.10667L5.73263 2.04299ZM10.1907 7.48257C9.66189 6.95073 9.66117 6.95144 9.66045 6.95216C9.66021 6.9524 9.65949 6.95313 9.659 6.95362C9.65802 6.95461 9.65702 6.95561 9.65601 6.95664C9.65398 6.95871 9.65188 6.96086 9.64972 6.9631C9.64539 6.96759 9.64081 6.97245 9.63599 6.97769C9.62634 6.98816 9.61575 7.00014 9.60441 7.01367C9.58174 7.04072 9.55605 7.07403 9.52905 7.11388C9.47492 7.19377 9.41594 7.2994 9.36589 7.43224C9.26376 7.70329 9.20901 8.0606 9.27765 8.50305C9.41189 9.36833 10.0078 10.5113 11.5343 12.0291L12.5919 10.9654C11.1634 9.54499 10.8231 8.68059 10.7599 8.27309C10.7298 8.07916 10.761 7.98371 10.7696 7.96111C10.7748 7.94713 10.7773 7.9457 10.7709 7.95525C10.7677 7.95992 10.7624 7.96723 10.7541 7.97708C10.75 7.98201 10.7451 7.98759 10.7394 7.99381C10.7365 7.99692 10.7335 8.00019 10.7301 8.00362C10.7285 8.00534 10.7268 8.00709 10.725 8.00889C10.7241 8.00979 10.7232 8.0107 10.7223 8.01162C10.7219 8.01208 10.7212 8.01278 10.7209 8.01301C10.7202 8.01371 10.7195 8.01441 10.1907 7.48257ZM11.5343 12.0291C13.0613 13.5474 14.2096 14.1383 15.0763 14.2713C15.5192 14.3392 15.8763 14.285 16.1472 14.1841C16.28 14.1346 16.3858 14.0763 16.4658 14.0227C16.5058 13.9959 16.5392 13.9704 16.5663 13.9479C16.5799 13.9367 16.5919 13.9262 16.6024 13.9166C16.6077 13.9118 16.6126 13.9073 16.6171 13.903C16.6194 13.9008 16.6215 13.8987 16.6236 13.8967C16.6246 13.8957 16.6256 13.8947 16.6266 13.8937C16.6271 13.8932 16.6279 13.8925 16.6281 13.8923C16.6288 13.8916 16.6295 13.8909 16.1007 13.359C15.5719 12.8272 15.5726 12.8265 15.5733 12.8258C15.5735 12.8256 15.5742 12.8249 15.5747 12.8244C15.5756 12.8235 15.5765 12.8226 15.5774 12.8217C15.5793 12.82 15.581 12.8183 15.5827 12.8166C15.5862 12.8133 15.5895 12.8103 15.5926 12.8074C15.5988 12.8018 15.6044 12.7969 15.6094 12.7929C15.6192 12.7847 15.6265 12.7795 15.631 12.7764C15.6403 12.7702 15.6384 12.773 15.6236 12.7785C15.5991 12.7876 15.501 12.8189 15.3038 12.7886C14.8905 12.7253 14.02 12.3853 12.5919 10.9654L11.5343 12.0291ZM9.97365 2.40961C8.95434 1.04802 6.94996 0.83257 5.73263 2.04299L6.79027 3.10667C7.32195 2.578 8.26623 2.63181 8.77286 3.30855L9.97365 2.40961ZM4.75168 5.70305C4.73201 5.35694 4.89075 4.9954 5.22067 4.66736L4.16303 3.60368C3.62571 4.13795 3.20329 4.89425 3.2541 5.78816L4.75168 5.70305ZM19.4723 17.7636C19.1975 18.0369 18.9029 18.1908 18.6067 18.2184L18.7459 19.7119C19.4805 19.6434 20.0824 19.2723 20.5299 18.8273L19.4723 17.7636ZM11.0063 7.72922C11.9908 6.7503 12.064 5.2019 11.2346 4.09401L10.0338 4.99295C10.4373 5.53193 10.3773 6.23938 9.9487 6.66555L11.0063 7.72922ZM20.5251 14.2869C21.3429 14.7315 21.4703 15.7769 20.8929 16.3511L21.9505 17.4148C23.2908 16.0821 22.8775 13.8584 21.2415 12.9691L20.5251 14.2869ZM17.085 13.438C17.469 13.0562 18.0871 12.9616 18.6146 13.2483L19.331 11.9305C18.2474 11.3414 16.9026 11.5041 16.0273 12.3743L17.085 13.438Z"
+                  fill="#fff" />
+              </svg>Talk with Us</a>
             <a class="block sm:inline-block hover-up-2 py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded wow animate__animated animate__fadeInUp"
               data-wow-delay=".3s" href="#how-we-work">Why Eric?</a>
           </div>
@@ -323,97 +328,60 @@
       </div>
     </div>
   </section>
-  <section class="py-20 xl:bg-contain bg-top bg-no-repeat"
-    style="background-image: url('assets/imgs/backgrounds/intersect.svg')" id="key-features">
-    <div class="container">
-      <div class="max-w-lg mx-auto mb-12 text-center">
-        <h2 class="my-2 text-3xl md:text-4xl font-bold font-heading  wow animate__animated animate__fadeInUp"
-          data-wow-delay=".1s">
-          Accelerating <br />
-          <span class="text-blue-800">Clinical Research </span> with Cutting-Edge Technology
-        </h2>
-        <p class="text-blueGray-800 leading-loose wow animate__animated animate__fadeInUp lh-2 " data-wow-delay=".3s">At Eric
-          Solutions, delivering innovative and affordable software for your clinical trials' success is our passion.</p>
-      </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-          <div
-            class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
-            data-wow-delay=".3s">
-            <div class="text-blue-500 mx-auto mb-4">
-              <svg id="ecd_card" class="h-8 w-8 mx-auto" viewBox="0 0 24 24" fill="#e11d48" xmlns="http://www.w3.org/2000/svg">
-                <g id="System / Data">
-                  <path id="Vector"
-                    d="M18 12V17C18 18.6569 15.3137 20 12 20C8.68629 20 6 18.6569 6 17V12M18 12V7M18 12C18 13.6569 15.3137 15 12 15C8.68629 15 6 13.6569 6 12M18 7C18 5.34315 15.3137 4 12 4C8.68629 4 6 5.34315 6 7M18 7C18 8.65685 15.3137 10 12 10C8.68629 10 6 8.65685 6 7M6 12V7"
-                    stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </g>
-              </svg>
-            </div>
-            <h3 class="mb-2 font-bold font-heading">Electronic Data Capture (EDC)</h3>
-            <p class="text-sm leading-loose text-blueGray-600 text-left">Capture, validate, and manage clinical trial data with ease.
-              Our EDC
-              system ensures accurate data entry, real-time monitoring, and faster study timelines while maintaining
-              data security.</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-          <div
-            class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
-            data-wow-delay=".6s">
-            <div class="text-blue-500 mx-auto mb-4">
-              <svg class="h-8 w-8 mx-auto" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17 7C17 5.34315 18.3431 4 20 4H28C29.6569 4 31 5.34315 31 7H34C36.2091 7 38 8.79086 38 11V39C38 41.2091 36.2091 43 34 43H14C11.7909 43 10 41.2091 10 39V11C10 8.79086 11.7909 7 14 7H17ZM20 6C19.4477 6 19 6.44772 19 7V9C19 9.55228 19.4477 10 20 10H28C28.5523 10 29 9.55228 29 9V7C29 6.44772 28.5523 6 28 6H20ZM17 26C16.4477 26 16 26.4477 16 27C16 27.5523 16.4477 28 17 28H31C31.5523 28 32 27.5523 32 27C32 26.4477 31.5523 26 31 26H17ZM16 32C16 31.4477 16.4477 31 17 31H31C31.5523 31 32 31.4477 32 32C32 32.5523 31.5523 33 31 33H17C16.4477 33 16 32.5523 16 32ZM17 36C16.4477 36 16 36.4477 16 37C16 37.5523 16.4477 38 17 38H27C27.5523 38 28 37.5523 28 37C28 36.4477 27.5523 36 27 36H17ZM20 14.9995C20.5523 14.9995 21 15.4472 21 15.9995V18H23C23.5523 18 24 18.4477 24 19C24 19.5523 23.5523 20 23 20H21V21.9998C21 22.552 20.5523 22.9998 20 22.9998C19.4477 22.9998 19 22.552 19 21.9998V20H17C16.4477 20 16 19.5523 16 19C16 18.4477 16.4477 18 17 18H19V15.9995C19 15.4472 19.4477 14.9995 20 14.9995Z"
-                  fill="#2563eb" />
-              </svg>
-            </div>
-            <h3 class="mb-2 font-bold font-heading">Clinical Trial Management System (CTMS)</h3>
-            <p class="text-sm leading-loose text-blueGray-600 text-left">Plan, manage, and track clinical trials efficiently. Our CTMS
-              provides
-              real-time insights, enhances site management, and simplifies compliance with regulatory standards.</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-          <div
-            class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
-            data-wow-delay=".9s">
-            <div class="text-blue-500 mx-auto mb-4">
-              <svg class="h-8 w-8 mx-auto" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 0H2V16H14V7H7V0Z" fill="#ea580c" />
-                <path d="M9 0V5H14L9 0Z" fill="#ea580c" />
-              </svg>
-            </div>
-            <h3 class="mb-2 font-bold font-heading">Electronic Trial Master File (eTMF)</h3>
-            <p class="text-sm leading-loose text-blueGray-600 text-left">Securely store, organize, and manage essential clinical trial
-              documents. Our eTMF ensures centralized access, regulatory compliance, and audit readiness at all times.
-            </p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
-          <div
-            class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
-            data-wow-delay="1.2s">
-            <div class="text-blue-500 mx-auto mb-4">
-              <svg fill="#16a34a" class="h-8 w-8 mx-auto" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                class="icon">
-                <path
-                  d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM726 585.7c0 55.3-44.7 100.1-99.7 100.1H420.6v53.4c0 5.7-6.5 8.8-10.9 5.3l-109.1-85.7c-3.5-2.7-3.5-8 0-10.7l109.1-85.7c4.4-3.5 10.9-.3 10.9 5.3v53.4h205.7c19.6 0 35.5-16 35.5-35.6v-78.9c0-3.7 3-6.8 6.8-6.8h50.7c3.7 0 6.8 3 6.8 6.8v79.1zm-2.6-209.9l-109.1 85.7c-4.4 3.5-10.9.3-10.9-5.3v-53.4H397.7c-19.6 0-35.5 16-35.5 35.6v78.9c0 3.7-3 6.8-6.8 6.8h-50.7c-3.7 0-6.8-3-6.8-6.8v-78.9c0-55.3 44.7-100.1 99.7-100.1h205.7v-53.4c0-5.7 6.5-8.8 10.9-5.3l109.1 85.7c3.6 2.5 3.6 7.8.1 10.5z" />
-              </svg>
-            </div>
-            <h3 class="mb-2 font-bold font-heading">Interactive Response Technology (IRT/IWRS)</h3>
-            <p class="text-sm leading-loose text-blueGray-600 text-left">Automate randomization and drug inventory management to
-              ensure precise
-              patient allocation and seamless supply chain coordination for clinical studies.</p>
-          </div>
-        </div>
-      </div>
 
+  <section class="py-20 xl:bg-contain bg-top bg-no-repeat">
+    <div class="mx-auto mb-12 text-center container mt-32 sm:mt-8 ">
+      @if ($featured->isEmpty())
+      <p>No Featured Data</p>
+      @else
+      @foreach ($featured as $item)
+      <h2 class="my-2 text-3xl md:text-4xl font-bold font-heading  wow animate__animated animate__fadeInUp text-blue-800"
+        data-wow-delay=".1s">
+        {{ $item->title }}
+      </h2>
+      <p class="text-blueGray-800 leading-loose wow animate__animated animate__fadeInUp lh-2 " data-wow-delay=".3s">{{ $item->description }}</p>
     </div>
 
+    @endforeach
+    @endif
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-wrap -mx-2">
+        <!-- Card 1 -->
+        @foreach ($featured as $items)
+        @foreach($items->bulletpoints as $item)
+
+        <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
+          <div class="p-6 bg-white rounded-lg shadow-lg">
+            <div class="rounded-full w-16 h-16 flex justify-center items-center text-white shadow-2xl" style="color:{{ $item->heading_color }};">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 small-gear" viewBox="0 0 20 20" fill="{{ $item->icon_color }}">
+                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+              </svg>
+            </div>
+
+            <h2 class="uppercase mt-6 font-bold mb-3" style="color:{{ $item->heading_color }}">{{$item->heading}}</h2>
+            <p class="font-light text-gray-600 mb-4 leading-relaxed"> {{ $item->text }} </p>
+            <a class=" flex items-center hover:text-blue-500" style="color:{{ $item->link_color }}" href="{{ $items->link }}">
+              More about {{$item->heading}}
+              <svg class="h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414 L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        @endforeach
+        @endforeach
+
+      </div>
     </div>
+    <div class="container h-auto w-full mx-auto flex flex-wrap items-center justify-center ">
+      @foreach ($featured as $item)
+      <img src="{{asset('storage/'.$item->image) }}" alt="{{ $item->title }}">
+      @endforeach
+    </div>
+    <h2 class="text-center mb-8 font-bold font-heading">{{ $item->title }}</h2>
 
   </section>
-
   <section class="services_tab w-full py-10">
     <div class="lg:w-full mx-auto">
       <div class="statistics">
@@ -540,7 +508,7 @@
             </div>
 
             <div class="mx-5">
-              <h4 class="text-2xl font-semibold text-white">90%</h4>
+              <h4 class="text-2xl font-semibold text-white">95%</h4>
               <div class="text-white">Recruitment</div>
             </div>
           </div>
@@ -588,7 +556,7 @@
             </div>
 
             <div class="mx-5">
-              <h4 class="text-2xl font-semibold text-white">4+</h4>
+              <h4 class="text-2xl font-semibold text-white">6</h4>
               <div class="text-white">Countries</div>
             </div>
           </div>
@@ -652,21 +620,23 @@
     <div class="container">
       <h2 class="text-3xl lg:text-4xl mb-8 font-semibold text-white">Recent Blog from Eric Solutions</h2>
       <div class="flex flex-wrap -mx-3">
-
-        <div class="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated hover-up-5"
-          data-wow-delay=".1s">
-          <a href="#">
-            <img class="h-80 w-full object-cover rounded" src="assets/imgs/placeholders/img-8.png" alt="">
-            <p class="mt-6 text-sm text-blue-400">
-              <span
-                class="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-800 rounded-xl mr-3">Company</span>
-              <span class="text-white text-xs">24 Jan, 2021</span>
-            </p>
-            <h3 class="my-2 text-2xl font-bold font-heading text-white">How to Make Website WCAG Compliant?</h3>
-            <p class="text-blueGray-300 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              luctus eget justo et iaculis.</p>
-          </a>
-        </div>
+          @foreach($posts as $post)
+          <div class="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated hover-up-5"
+            data-wow-delay=".1s">
+            <a href="#">
+              <img class="h-80 w-full object-cover rounded" src="{{asset('storage/'.$post->image)}}" alt="{{$post->title}}">
+              <p class="mt-6 text-sm text-blue-400">
+              @if($post->is_featured)
+                <span
+                  class="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-800 rounded-xl mr-3">Featured</span>
+              @endif 
+                <span class="text-white text-md">{{\Carbon\Carbon::parse($post->published_at)->format('j F, Y')}}</span>
+              </p>
+              <h3 class="my-2 text-2xl font-bold font-heading text-white">{{$post->title}}</h3>
+              <p class="text-blueGray-300 leading-loose"> {{Str::of($post->content)->limit(80)}} </p>
+            </a>
+          </div>
+        @endforeach
         <div class="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated hover-up-5"
           data-wow-delay=".3s">
           <a href="#">
@@ -700,7 +670,7 @@
       </div>
       <div class="text-center">
         <a class="hover-up-5 inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
-          href="#">Show all posts</a>
+          href="/blogs">Show all posts</a>
       </div>
     </div>
   </section>
