@@ -351,6 +351,7 @@ user agent stylesheet
 
 .active {
     background: #172554;
+    color: #fff!important;
 }
 .bg-footer {
     background:#f69300;

@@ -104,8 +104,8 @@
             <span class="text-blue-800"> Oncology </span>
         </h2>
         <div class="flex justify-around items-center lg:items-start flex-wrap">
-            <div class="w-64 bg-gray-100 h-48  mb-4 font-medium">
-                <div class="w-64 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center shadow-lg ">
+            <div class="w-64 bg-gray-100 h-48  mb-4 font-medium shadow-lg">
+                <div class="w-64 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center">
                     <div class="block rounded-t overflow-hidden  text-center ">
                         <div class="bg-blue-800 text-white py-3 font-bold">
                             Adaptive Trial Designs
@@ -121,8 +121,8 @@
                 </div>
             </div>
 
-            <div class="w-64 bg-gray-100 h-48  mb-4 font-medium">
-                <div class="w-64 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center shadow-lg ">
+            <div class="w-64 bg-gray-100 h-48  mb-4 font-medium shadow-lg">
+                <div class="w-64 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center">
                     <div class="block rounded-t overflow-hidden  text-center ">
                         <div class="bg-blue-800 text-white py-3 font-bold">
                             Global Patient Recruitment
@@ -137,8 +137,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-64 bg-gray-100 h-48  mb-4 font-medium">
-                <div class="w-64 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center shadow-lg ">
+            <div class="w-64 bg-gray-100 h-48  mb-4 font-medium shadow-lg">
+                <div class="w-64 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center">
                     <div class="block rounded-t overflow-hidden  text-center ">
                         <div class="bg-blue-800 text-white py-3 font-bold">
                             Real-World Evidence
@@ -168,7 +168,7 @@
                 </div>
                 <div class="mt-16 max-w-full sm:mt-20 lg:mt-24 lg:max-w-4xl container">
                     <div class="flex flex-col items-center justify-between lg:flex-row">
-                        <div class="relative flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 mr-3 mt-3">
+                        <div class="relative flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 mr-3 mt-3 shadow-lg">
                             <dt class="flex flex-col items-center justify-center text-base font-semibold leading-7 text-gray-900">
                                 <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-800 mb-4">
                                     <svg fill="#fff" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
@@ -178,7 +178,7 @@
                             </dt>
                             <dd class="mt-2 text-base leading-relaxed text-gray-600 container">Successfully managed oncology trials across all phases, from early development to post-approval studies.</dd>
                         </div>
-                        <div class="relative flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 mr-3 mt-3">
+                        <div class="relative flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 mr-3 mt-3 shadow-lg">
                             <dt class="flex flex-col items-center justify-center text-base font-semibold leading-7 text-gray-900">
                                 <div class="flex h-12 w-12 p-3 items-center justify-center rounded-lg bg-blue-800 mb-4">
                                     <svg fill="#fff" viewBox="-3 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
@@ -188,7 +188,7 @@
                             </dt>
                             <dd class="mt-2 text-base leading-relaxed text-gray-600 container">Deep understanding of global regulatory requirements for oncology therapies.</dd>
                         </div>
-                        <div class="relative flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 mt-3 mt-3">
+                        <div class="relative flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 mt-3 mt-3 shadow-lg">
                             <dt class="flex flex-col items-center justify-center text-base font-semibold leading-7 text-gray-900">
                                 <div class="flex h-12 w-12 p-3 items-center justify-center rounded-lg bg-blue-800 mb-4">
                                     <svg fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.23 297.23" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 297.23 297.23">

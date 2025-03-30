@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TechnologyController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LinkedInController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Route::get('/team', function () {
 });
 Route::get('/about', function () {
     return view('about/eric');
+});
+
+Route::get('/gdpr', function () {
+    return view('legal/gdpr');
 });
 
 
@@ -67,3 +72,8 @@ Route::middleware('auth')->group(function () {
 
 
 require __DIR__ . '/auth.php';
+
+// linkedin call back route
+Route::get('/linkedin/auth', [LinkedInController::class, 'redirectToLinkedIn']);
+Route::get('/linkedin/callback', [LinkedInController::class, 'handleLinkedInCallback']);
+Route::post('/linkedin/post', [LinkedInController::class, 'postToLinkedIn'])->middleware('auth');

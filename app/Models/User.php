@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Filament\Panel;
 
 
 class User extends Authenticatable
@@ -33,6 +34,10 @@ class User extends Authenticatable
         'zipcode',
         'password',
         'is_admin',
+        'linkedin_access_token',
+        'linkedin_refresh_token',
+        'linkedin_token_expires_at',
+        'linkedin_user_id',
     ];
 
     public function canAccessPanel(Panel $panel): bool
