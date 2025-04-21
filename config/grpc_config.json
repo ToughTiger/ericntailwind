@@ -1,0 +1,13 @@
+{
+    "interfaces": {
+      "google.analytics.data.v1beta.BetaAnalyticsData": {
+        "rest": {
+          "address": "https://analyticsdata.googleapis.com",
+          "timeout": 30.0,
+          "retry_codes": {
+            "idempotent": ["UNAVAILABLE", "DEADLINE_EXCEEDED"]
+          }
+        }
+      }
+    }
+  }

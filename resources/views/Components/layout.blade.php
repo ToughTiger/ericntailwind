@@ -157,6 +157,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
             </div>
         </div>
     </section>
+    @include('cookie-consent::dialogContents')
     </div>
     <!-- End .main -->
 

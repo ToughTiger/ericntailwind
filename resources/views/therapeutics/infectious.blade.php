@@ -7,7 +7,7 @@
             muted
             playsinline
             class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="assets/imgs/gif/infectious.mp4" type="video/mp4" />
+            <source src="https://d2fbnqxqb0c7i4.cloudfront.net/infectious.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
 
@@ -25,7 +25,7 @@
                 <div class="lg:w-full px-4 text-center lg:text-left">
 
                     <p class="mb-6 text-lg font-bold leading-relaxed wow animate__animated animate__fadeInUp text-left" data-wow-delay=".5s">
-                    The COVID-19 pandemic has highlighted the urgent need for effective infectious disease research. At [Your CRO Name], we are committed to developing therapies and vaccines that address current and emerging infectious diseases.
+                    The COVID-19 pandemic has highlighted the urgent need for effective infectious disease research. At Eric Solutions, we are committed to developing therapies and vaccines that address current and emerging infectious diseases.
                     </p>
 
                 </div>

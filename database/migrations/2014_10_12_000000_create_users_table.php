@@ -28,6 +28,11 @@ return new class extends Migration
             $table->string('password');
             $table->boolean('is_admin')->default(false);
             $table->rememberToken();
+            $table->string('linkedin_access_token')->nullable();
+            $table->string('linkedin_refresh_token')->nullable();
+            $table->timestamp('linkedin_token_expires_at')->nullable();
+            $table->string('linkedin_user_id')->nullable();
+            $table->string('linkedin_name')->nullable();
             $table->timestamps();
         });
     }

@@ -28,7 +28,7 @@ return [
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+        'region' => env('AWS_DEFAULT_REGION'),
     ],
 
     'linkedin' => [
@@ -36,5 +36,10 @@ return [
     'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
     'redirect' => env('LINKEDIN_REDIRECT_URI'),
 ],
+
+    'google_analytics' => [
+        'property_id' => env('GA4_PROPERTY_ID'),
+        'service_account_path' => storage_path('ericsolutions-94bb180c4550.json'),
+    ],
 
 ];

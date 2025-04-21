@@ -3,15 +3,19 @@
 namespace App\Filament\Resources;
 
 
+use Illuminate\Support\Facades\Log;
+use Livewire\TemporaryUploadedFile;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Models\Post;
 
 use Carbon\CarbonImmutable;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -22,13 +26,14 @@ use Filament\Tables;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-
+use Illuminate\Support\Facades\Storage;
 class PostResource extends Resource
 {
 
@@ -103,17 +108,22 @@ class PostResource extends Resource
                             ]),
                         Section::make("Image Upload")
                             ->description('Upload an image for images and set Alt tag')
-                            ->Schema([
-                                FileUpload::make('image')
+                            ->Schema([                             
+                                FileUpload::make('image')  
+                                    ->disk('public')    
                                     ->directory('form-attachments')
                                     ->preserveFilenames()
                                     ->image()
                                     ->imageEditor()
-                                   ->visibility('public')
-                                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif']),
-                        TextInput::make('alt'),
+                                    ->visibility('public')
+                                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif'])
+                                    ->previewable()
+                                    ->loadingIndicatorPosition('right')
+                                    ->panelLayout('integrated'),
+                                                                   
+                                TextInput::make('alt'),
 
-                            ])->collapsible(),
+                            ])->collapsible(),                           
 
                     ]),
 

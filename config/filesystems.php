@@ -14,6 +14,7 @@ return [
     */
 
     'default' => env('FILESYSTEM_DISK', 'local'),
+    // dd(env('FILESYSTEM_DISK', 'local')),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,6 +34,8 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+            // 'url' => env('APP_URL').'/storage',
+            // 'visibility' => 'public',
             'throw' => false,
         ],
 

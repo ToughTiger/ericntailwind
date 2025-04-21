@@ -32,8 +32,10 @@ class UserResource extends Resource
             ->schema([
                 Group::make()
                     ->schema([
-                        Section::make('User')
-                            ->description('Create New User')
+                        Section::make(fn (string $operation) => $operation === 'edit' ? 'Edit User' : 'Create New User')
+                            ->description(fn (string $operation) => $operation === 'edit' 
+                            ? 'You are editing an existing record' 
+                            : 'Please fill out all required fields')
                             ->schema([
                                 TextInput::make('name'),
                                 TextInput::make('phone'),
@@ -41,9 +43,12 @@ class UserResource extends Resource
                                 TextInput::make('social'),
                                 TextInput::make('password')
                                 ->password()
+                                ->required(fn (string $operation): bool => $operation === 'create')
                                 ->dehydrateStateUsing(fn ($state) => Hash::make($state))
-                                ->dehydrated(fn ($state) => filled($state)),
-                                TextInput::make('password_confirmation'),
+                                ->dehydrated(fn ($state) => filled($state))
+                                ->hiddenOn('edit'),
+                                TextInput::make('password_confirmation')
+                                ->hiddenOn('edit'),
                                 Forms\Components\MarkdownEditor::make('bio')
                                     ->columnSpan('full')
                                 ->helperText('Brief Bio of User for SEO'),

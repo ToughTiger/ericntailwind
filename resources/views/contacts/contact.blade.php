@@ -48,7 +48,7 @@
                         <div class="float-left mb-6 wow animate__animated animate__fadeIn animated" data-wow-delay=".1s">
                             <label class="inline-flex text-xs">
                                 <input type="checkbox" class="form-checkbox" checked />
-                                <span class="ml-2">I agree to <a class="underline hover:text-blueGray-500" href="#">Police privacy</a> and <a class="underline hover:text-blueGray-500" href="#">Terms of Use</a></span>
+                                <span class="ml-2">I agree to <a class="underline hover:text-blueGray-500" href="/gdpr">Privacy Policy</a> and <a class="underline hover:text-blueGray-500" href="#">Terms of Use</a></span>
                             </label>
                         </div>
                         <button class="transition duration-300 ease-in-out transform hover:-translate-y-1 block w-full p-4 text-center text-xs text-white font-semibold leading-none bg-blue-500 hover:bg-blue-700 rounded">Sign In</button>

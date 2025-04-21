@@ -87,5 +87,7 @@ return [
     'register_role_policy' => [
         'enabled' => true,
     ],
+    
+    'default_filesystem_disk' => 's3',
 
 ];

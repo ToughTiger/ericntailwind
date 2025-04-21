@@ -27,9 +27,10 @@
                             <img class="h-32" src="assets/imgs/logos/final_white.gif" alt="" />
                         </a>
                         <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+                            
                             <li class="group relative pt-4 pb-4 has-child">
-                                <a class="text-sm font-semibold text-white hover:text-blueGray-500" href="#">Therapeutics</a>
-                                <ul class="drop-down-menu min-w-200">
+                                <a class="text-sm font-semibold text-white hover:text-blueGray-500" href="/overview">Therapeutics</a>
+                                <!-- <ul class="drop-down-menu min-w-200">
                                     <li>
                                         <a href="/oncology" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Oncology</a>
                                     </li>
@@ -48,7 +49,7 @@
                                         <a href="#" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Hematology</a>
                                     </li>
 
-                                </ul>
+                                </ul> -->
                             </li>
                             <li class="group relative pt-4 pb-4 has-child">
                                 <a href="#" class="text-sm font-semibold text-white hover:text-blueGray-500">Solutions</a>
@@ -105,7 +106,7 @@
                                         <a href="/team" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Team</a>
                                     </li>
                                     <li>
-                                        <a href="/testimonials" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Testimonials</a>
+                                        <!-- <a href="/testimonials" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Testimonials</a> -->
                                     </li>
 
                                 </ul>
@@ -120,10 +121,10 @@
                                         <a href="/case-studies" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Case Studies</a>
                                     </li>
                                     <li>
-                                        <a href="/white-papers" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">White Papers</a>
+                                        <!-- <a href="/white-papers" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">White Papers</a> -->
                                     </li>
                                     <li>
-                                        <a href="/faq" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">FAQ</a>
+                                        <!-- <a href="/faq" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">FAQ</a> -->
                                     </li>
                                 </ul>
                             </li>
@@ -194,7 +195,7 @@
                                 </ul>
                             </li>
                             <li class="mb-1 menu-item-has-children rounded-xl">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="/techonologies">Technologies</a>
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="#">Technologies</a>
                                 <ul class="dropdown pl-5">
                                     <li>
                                         <a href="/ctms" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">CTMS</a>
@@ -203,7 +204,7 @@
                                         <a href="/edc" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">EDC</a>
                                     </li>
                                     <li>
-                                        <a href="/IWRS" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">IWRS</a>
+                                        <a href="/irt" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">IWRS</a>
                                     </li>
                                     <li>
                                         <a href="/etmf_tech" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">eTMF</a>
@@ -211,38 +212,37 @@
 
                                 </ul>
                             </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="portfolio.html">Portfolio</a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Team</a>
-                            </li>
+                          
                             <li class="mb-1 menu-item-has-children rounded-xl">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Blog</a>
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Company</a>
                                 <ul class="dropdown pl-5">
                                     <li>
-                                        <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category 1</a>
+                                        <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">About Eric Solution1</a>
                                     </li>
                                     <li>
-                                        <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category 2</a>
+                                        <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Team</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="mb-1 menu-item-has-children rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Insight</a>
+                                <ul class="dropdown pl-5">
+                                    <li>
+                                        <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Blog</a>
                                     </li>
                                     <li>
+                                        <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Case Studies</a>
+                                    </li>
+                                    <!-- <li>
                                         <a href="blog-single.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 1</a>
                                     </li>
                                     <li>
                                         <a href="blog-single-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 2</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="faqs.html">Faqs</a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="testimonials.html">Testimonial</a>
-                            </li>
+                          
                             <li class="mb-1">
                                 <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="contact.html">Contact Us</a>
                             </li>
