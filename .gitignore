@@ -16,5 +16,4 @@ npm-debug.log
 yarn-error.log
 /.fleet
 /.idea
-/.vscode
-/public/assets/imgs
+/.vscodestorage/*.json
