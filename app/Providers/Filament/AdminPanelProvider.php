@@ -2,11 +2,7 @@
 
 namespace App\Providers\Filament;
 
-use App\Filament\Widgets\AcquisitionCard;
-use App\Filament\Widgets\AudienceOverviewChart;
-use App\Filament\Widgets\RealtimeCounter;
-use App\Filament\Widgets\TopPagesTable;
-// use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -32,28 +28,24 @@ class AdminPanelProvider extends PanelProvider
             ->default()           
             ->id('admin')
             ->path('admin')
+            ->brandName('Eric Admin Dashboard')
             ->login()
             ->colors([
                 'primary' => "#0059b2",
             ])
             // ->defaultFilesystemDisk('s3')
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+               FilamentShieldPlugin::make(),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
                 // Pages\Dashboard::class,
-                // \App\Filament\Pages\AnalyticsDashboard::class,
                 
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-            //    AcquisitionCard::class,
-            //    AudienceOverviewChart::class,
-            //    RealtimeCounter::class,
-            //    TopPagesTable::class,
-            //    \App\Filament\Widgets\EnhancedAnalyticsDashboard::class,
+           //
             ])
             ->middleware([
                 EncryptCookies::class,

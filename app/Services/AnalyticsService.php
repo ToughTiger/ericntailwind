@@ -84,21 +84,21 @@ class AnalyticsService
         );
     }
 
-    public function createPeriod(string $range, ?Carbon $startDate = null, ?Carbon $endDate = null): Period
+    public function createPeriod(string $range, ?Carbon $start_date = null, ?Carbon $end_date = null): Period
     {
-        $endDate = $endDate ?? now();
+        $end_date = $end_date ?? now();
         
         return match ($range) {
-            'today' => Period::create($endDate->copy()->startOfDay(), $endDate),
-            'yesterday' => Period::create($endDate->copy()->subDay()->startOfDay(), $endDate->copy()->subDay()->endOfDay()),
-            '7days' => Period::create($endDate->copy()->subDays(6)->startOfDay(), $endDate),
-            '30days' => Period::create($endDate->copy()->subDays(29)->startOfDay(), $endDate),
-            '90days' => Period::create($endDate->copy()->subDays(89)->startOfDay(), $endDate),
-            '12months' => Period::create($endDate->copy()->subMonths(11)->startOfDay(), $endDate),
-            'month' => Period::create($endDate->copy()->startOfMonth(), $endDate),
-            'quarter' => Period::create($endDate->copy()->startOfQuarter(), $endDate),
-            'year' => Period::create($endDate->copy()->startOfYear(), $endDate),
-            'custom' => Period::create($startDate, $endDate),
+            'today' => Period::create($end_date->copy()->startOfDay(), $end_date),
+            'yesterday' => Period::create($end_date->copy()->subDay()->startOfDay(), $end_date->copy()->subDay()->endOfDay()),
+            '7days' => Period::create($end_date->copy()->subDays(6)->startOfDay(), $end_date),
+            '30days' => Period::create($end_date->copy()->subDays(29)->startOfDay(), $end_date),
+            '90days' => Period::create($end_date->copy()->subDays(89)->startOfDay(), $end_date),
+            '12months' => Period::create($end_date->copy()->subMonths(11)->startOfDay(), $end_date),
+            'month' => Period::create($end_date->copy()->startOfMonth(), $end_date),
+            'quarter' => Period::create($end_date->copy()->startOfQuarter(), $end_date),
+            'year' => Period::create($end_date->copy()->startOfYear(), $end_date),
+            'custom' => Period::create($start_date, $end_date),
             default => Period::days(7),
         };
     }
