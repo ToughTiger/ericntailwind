@@ -1,0 +1,66 @@
+{
+    "name": "arbermustafa/filament-google-charts-widgets",
+    "description": "Chart widgets for Filament Php using Google Charts",
+    "keywords": [
+        "arbermustafa",
+        "laravel",
+        "filament-plugin",
+        "filament-google-charts-widgets",
+        "google-charts",
+        "charts",
+        "php"
+    ],
+    "homepage": "https://github.com/arbermustafa/filament-google-charts-widgets",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arber Mustafa",
+            "email": "info@arbermustafa.com",
+            "role": "Developer",
+            "homepage": "https://arbermustafa.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/widgets": "^3.0",
+        "spatie/laravel-package-tools": "^1.13.5"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArberMustafa\\FilamentGoogleCharts\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArberMustafa\\FilamentGoogleCharts\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArberMustafa\\FilamentGoogleCharts\\WidgetServiceProvider"
+            ],
+            "aliases": {
+                "FilamentGoogleCharts": "ArberMustafa\\FilamentGoogleCharts\\FilamentGoogleCharts"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
