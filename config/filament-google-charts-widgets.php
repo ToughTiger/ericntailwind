@@ -15,7 +15,6 @@ return [
     | See: https://developers.google.com/chart/interactive/docs/gallery/piechart#configuration-options
     |
     */
-    'default_options' => [
         'hAxis' => [
             'titleTextStyle' => [
                 'color' => '#607d8b',
@@ -69,6 +68,4 @@ return [
             ],
         ],
         'backgroundColor' => 'transparent',
-    ],
-
-];
+    ];
