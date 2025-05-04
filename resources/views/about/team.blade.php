@@ -24,10 +24,10 @@
                             <a href="#">
                                 <img src="assets/imgs/icons/facebook-blue.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#" >
                                 <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#" class="w-5 h-5">
                                 <img src="assets/imgs/icons/x.svg" alt="" />
                             </a>
                         </div>
@@ -50,7 +50,7 @@
                             <a href="#">
                                 <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#" class="w-5 h-5">
                                 <img src="assets/imgs/icons/x.svg" alt="" />
                             </a>
                         </div>
@@ -73,7 +73,7 @@
                             <a href="#">
                                 <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#" class="w-5 h-5">
                                 <img src="assets/imgs/icons/x.svg" alt="" />
                             </a>
                         </div>
@@ -96,12 +96,12 @@
                             <a href="#">
                                 <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#" class="w-5 h-5">
                                 <img src="assets/imgs/icons/x.svg" alt="" />
                             </a>
                         </div>
                     </div>
-                </div>x
+                </div>
             </div>
         </div>
     </section>

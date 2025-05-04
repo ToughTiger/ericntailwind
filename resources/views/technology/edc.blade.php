@@ -1,6 +1,6 @@
 <x-layout>
   <section class="hero-1">
-    <div class="container bg-right-bottom bg-cover file" style="background-image:url('assets/imgs/elements/blob.svg')">
+    <div class="container bg-right-bottom bg-no-repeat bg-top file" style="background-image:url('assets/imgs/elements/blob.svg')">
       <div>
         <h1 class="text-center font-bold text-3xl md:text-md">Eric Electronic Data Capture(EDC)</h1>
       </div>
@@ -30,8 +30,7 @@
       <div class="flex flex-wrap p-8 -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
         <div class="container w-full lg:pr-20 lg:pt-4 order-1 lg:order-0">
           <h2 class="mb-4 text-2xl lg:text-2xl text-center uppercase font-bold font-heading wow animate__animated animate__fadeInUp">
-            <span class="text-white">Capture and Re-use </span>
-            <span> Research Data from anywhere and anytimeC</span>
+            <span class="text-white">Capture and Re-use Research Data from anywhere and anytime</span>
           </h2>
           <p class="mb-8 leading-loose text-white wow animate__animated animate__fadeInUp" data-wow-delay=".3s">Explore ERIC EDC, our most robust module, to see how it can help you capture and manage all your study data in one centralized hub. If your needs extend further, easily incorporate ERIC eConsent and ePRO to build a comprehensive ecosystem of research tools.</p>
           <div class=" p-8 rounded-lg shadow-xl">

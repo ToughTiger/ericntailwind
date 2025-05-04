@@ -1,6 +1,6 @@
 <x-layout>
   <section class="hero-1">
-    <div class="container bg-right-bottom bg-no-repeat file" style="background-image:url('assets/imgs/elements/blob.svg')">
+    <div class="container bg-right-bottom bg-no-repeat bg-top file" style="background-image:url('assets/imgs/elements/blob.svg')">
       <div>
         <h1 class="text-center  font-bold text-4xl md:text-md">Clinical Operation & Project Management</h1>
       </div>

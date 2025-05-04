@@ -1,6 +1,6 @@
 <x-layout>
   <section class="hero-1">
-    <div class="container bg-right-bottom bg-cover file" style="background-image:url('assets/imgs/elements/blob.svg')">
+    <div class="container bg-right-bottom bg-no-repeat bg-top file" style="background-image:url('assets/imgs/elements/blob.svg')">
       <div>
         <h1 class="text-center font-bold text-3xl md:text-md">Electronic Trial Master File (eTMF) System</h1>
       </div>

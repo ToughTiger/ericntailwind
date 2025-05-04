@@ -152,7 +152,7 @@
                 <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300">
                     <div class="flex items-center mb-8">
                         <a class="mr-auto text-3xl font-semibold leading-none" href="#">
-                            <img class="h-20" src="assets/imgs/logos/Logo_animation.gif" alt="" />
+                            <img class="h-20" src="assets/imgs/logos/final_black.gif" alt="" />
                         </a>
                         <button class="navbar-close">
                             <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
@@ -195,19 +195,19 @@
                                 </ul>
                             </li>
                             <li class="mb-1 menu-item-has-children rounded-xl">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="#">Technologies</a>
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-400" href="#">Technologies</a>
                                 <ul class="dropdown pl-5">
                                     <li>
-                                        <a href="/ctms" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">CTMS</a>
+                                        <a href="/ctms" class="menu-sub-item text-sm text-blueGray-400 hover:text-blueGray-500">CTMS</a>
                                     </li>
                                     <li>
-                                        <a href="/edc" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">EDC</a>
+                                        <a href="/edc" class="menu-sub-item text-sm text-blueGray-400 hover:text-blueGray-500">EDC</a>
                                     </li>
                                     <li>
-                                        <a href="/irt" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">IWRS</a>
+                                        <a href="/irt" class="menu-sub-item text-sm text-blueGray-400 hover:text-blueGray-500">IWRS</a>
                                     </li>
                                     <li>
-                                        <a href="/etmf_tech" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">eTMF</a>
+                                        <a href="/etmf_tech" class="menu-sub-item text-sm text-blueGray-400 hover:text-blueGray-500">eTMF</a>
                                     </li>
 
                                 </ul>
@@ -217,10 +217,10 @@
                                 <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Company</a>
                                 <ul class="dropdown pl-5">
                                     <li>
-                                        <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">About Eric Solution1</a>
+                                        <a href="/about" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">About Eric Solution</a>
                                     </li>
                                     <li>
-                                        <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Team</a>
+                                        <a href="/team" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Team</a>
                                     </li>
                                     
                                 </ul>
@@ -229,10 +229,10 @@
                                 <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Insight</a>
                                 <ul class="dropdown pl-5">
                                     <li>
-                                        <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Blog</a>
+                                        <a href="/posts" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Case Studies</a>
+                                        <a href="/case-studies" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Case Studies</a>
                                     </li>
                                     <!-- <li>
                                         <a href="blog-single.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 1</a>

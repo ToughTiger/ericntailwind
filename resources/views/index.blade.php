@@ -6,7 +6,7 @@
           <div class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
             <h2 class="text-3xl lg:text-4xl mb-4 font-bold font-heading wow animate__animated animate__fadeIn">
               <!-- Modern Yet <br /> -->
-              <span class="text-white">Clinical Trial Management Software</span>
+              <span class="text-white">Clinical Trial Management Solutions</span>
             </h2>
             <p class="text-blueGray-400 leading-relaxed wow animate__animated animate__fadeIn">We are <strong
                 class="text-white">Eric Solutions</strong>, a Clinical trial Expert</p>
@@ -359,9 +359,9 @@
               </svg>
             </div>
 
-            <h2 class="uppercase mt-6 font-bold mb-3" style="color:{{ $item->heading_color }}">{{$item->heading}}</h2>
+            <h2 class="uppercase mt-6 font-bold mb-3" style="color:{{ $item->heading_color}}"> {{$item->heading}} </h2>
             <p class="font-light text-gray-600 mb-4 leading-relaxed"> {{ $item->text }} </p>
-            <a class=" flex items-center hover:text-blue-500" style="color:{{ $item->link_color }}" href="{{ $items->link }}">
+            <a class=" flex items-center hover:text-blue-500" style="color:{{ $item->link_color }}" href="{{ $items->link ?? '#' }}">
               More about {{$item->heading}}
               <svg class="h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414 L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />

@@ -2,19 +2,33 @@
 <html lang="en">
 
 <head>
+     <!-- Google Tag Manager -->
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WN9XWGKG');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DG3HYM0N5T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DG3HYM0N5T');
+    </script>
     <title>Eric Solutions - Clinical Trial Expert</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Tailwind CSS Saas Landing Page" />
-    <meta name="author" content="alithemes.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Eric Solutions - Clinical Trial Expert" />   
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('assets/imgs/logos/favicon.ico') }}" />
     <!-- Vendor CSS -->
     
     <link rel="stylesheet" href="{{ URL::asset('assets/css/animate.min.css?v=2.0') }}" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/slick.css?v=2.0') }}" />
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/tailwind-built.css?v=2.0') }}" />
-    
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/tailwind-built.css?v=2.0') }}" />    
 
     <link rel="stylesheet" href="{{ URL::asset('assets/css/normalize.css') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,6 +40,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 
 <body class="bg-white text-body font-body">
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN9XWGKG"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <div class="main">
         <x-navigation />
         {{ $slot }}
