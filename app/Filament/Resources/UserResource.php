@@ -8,11 +8,14 @@ use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -88,6 +91,10 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
+                ImageColumn::make('image_url')
+                ->label('Photo')
+                ->circular() // optional: makes it round
+                ->size(50),   // optional: controls image size
                 TextColumn::make('name'),
                 TextColumn::make('phone'),
                 TextColumn::make('email'),
