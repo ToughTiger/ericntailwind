@@ -32,6 +32,7 @@ class LinkedInService
             'redirect_uri' => route('linkedin.callback'),
             'client_id' => config('services.linkedin.client_id'),
             'client_secret' => config('services.linkedin.client_secret'),
+
         ]);
 
         $data = $response->json();
