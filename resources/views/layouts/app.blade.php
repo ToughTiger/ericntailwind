@@ -113,6 +113,50 @@
         <script src="{{ URL::asset('assets/js/vendor/mobile-menu.js') }}"></script>
      
         <script src="{{ URL::asset('assets/js/main.js?v=2.0') }}"></script>
+         <script src="{{ asset('vendor/filament-ai-tools/ai-tools.js') }}"></script>
+         
+     <script>
+    document.addEventListener("livewire:init", () => {
+        Livewire.on("use-content", ({ field, content }) => {
+            const modelName = `data.${field}`;
+
+            // Find the input field (this works even if it's hidden by Filament)
+            const el = document.querySelector(`[wire\\:model="${modelName}"]`);
+            if (!el) {
+                console.warn(`No field found for ${modelName}`);
+                return;
+            }
+
+            // Try to set the Alpine.js bound state (for MarkdownEditor)
+            const alpineComponent = el.closest('[x-data]');
+            if (alpineComponent && alpineComponent.__x) {
+                try {
+                    // For MarkdownEditor: set Alpine state
+                    alpineComponent.__x.set('state', content);
+                } catch (e) {
+                    console.warn('Could not set Alpine state:', e);
+                }
+            }
+
+            // Update input value directly (Livewire will see this)
+            el.value = content;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+
+            // If needed: use Livewire's set manually
+            const livewireId = el.closest("[wire\\:id]")?.getAttribute("wire:id");
+            const livewireInstance = Livewire.find(livewireId);
+            if (livewireInstance) {
+                livewireInstance.set(modelName, content);
+            }
+
+            // Optional: visual feedback
+            el.classList.add("ring", "ring-green-400", "transition");
+            setTimeout(() => el.classList.remove("ring", "ring-green-400"), 1000);
+        });
+    });
+</script>
+
+
     </body>
 </html>
 

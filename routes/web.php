@@ -4,14 +4,18 @@ use App\Http\Controllers\CaseStudyController;
 use App\Http\Controllers\FeaturedController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LinkedInController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\TechnologyController;
 use App\Models\User;
+
 use App\Services\LinkedInService; // Ensure this is the correct namespace for LinkedInService
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
+
+
 
 
 
@@ -33,12 +37,11 @@ Route::get('/about', function () {
     return view('about/eric');
 });
 
-Route::get('/single', function () {
-    return view('blog/singlePost');
-});
-Route::get('/posts', function () {
-    return view('blog/blogPost');
-});
+// Post Routes
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{slug}', [PostController::class, 'singlePost']);
+
 
 Route::get('/contact', function () {
     return view('contacts/contact');

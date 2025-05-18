@@ -4,76 +4,76 @@ $('button').on('click', function(){
     $('button').removeClass('active');
     $(this).addClass('active');
 });
-document.addEventListener("DOMContentLoaded", () => {
-    const tabHeaders = document.querySelectorAll("#tabHeaders .tab-header");
-    const headers = document.querySelectorAll(".accordion-header");
-    const tabContents = document.querySelectorAll("#tabContents .tab-content");
-    const tabHeader = document.getElementById("tabHeaders");
-    const tabAccordians = document.getElementById("tab-accordian");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const tabHeaders = document.querySelectorAll("#tabHeaders .tab-header");
+//     const headers = document.querySelectorAll(".accordion-header");
+//     const tabContents = document.querySelectorAll("#tabContents .tab-content");
+//     const tabHeader = document.getElementById("tabHeaders");
+//     const tabAccordians = document.getElementById("tab-accordian");
    
 
-    const toggleContent = (id) => {
-      tabContents.forEach((content) => {
-        content.classList.add("hidden");
-      });
-      document.getElementById(id).classList.remove("hidden");
+//     const toggleContent = (id) => {
+//       tabContents.forEach((content) => {
+//         content.classList.add("hidden");
+//       });
+//       document.getElementById(id).classList.remove("hidden");
       
-    };
+//     };
    
 
-    const handleSmallScreen = () => {
-        headers.forEach((header) => {
-            header.addEventListener("click", () => {
-              const targetId = header.getAttribute("data-target");
-              const content = document.getElementById(targetId);
+//     const handleSmallScreen = () => {
+//         headers.forEach((header) => {
+//             header.addEventListener("click", () => {
+//               const targetId = header.getAttribute("data-target");
+//               const content = document.getElementById(targetId);
     
-              // Toggle the content visibility
-              const isHidden = content.classList.contains("hidden");
-              document.querySelectorAll(".accordion-content").forEach((el) => el.classList.add("hidden"));
-              if (isHidden) content.classList.remove("hidden");
-            });
-          });
-    };
+//               // Toggle the content visibility
+//               const isHidden = content.classList.contains("hidden");
+//               document.querySelectorAll(".accordion-content").forEach((el) => el.classList.add("hidden"));
+//               if (isHidden) content.classList.remove("hidden");
+//             });
+//           });
+//     };
 
-    const handleLargeScreen = () => {
-      tabHeaders.forEach((header, index) => {
-        header.addEventListener("click", () => {
-          const targetId = header.getAttribute("data-target");
-          console.log(targetId);
-          toggleContent(targetId);
-        });
+//     const handleLargeScreen = () => {
+//       tabHeaders.forEach((header, index) => {
+//         header.addEventListener("click", () => {
+//           const targetId = header.getAttribute("data-target");
+//           console.log(targetId);
+//           toggleContent(targetId);
+//         });
 
-        // Set first tab active by default on large screens
-        if (index === 0) {
-          const targetId = header.getAttribute("data-target");
-          toggleContent(targetId);
-        }
-      });
-    };
+//         // Set first tab active by default on large screens
+//         if (index === 0) {
+//           const targetId = header.getAttribute("data-target");
+//           toggleContent(targetId);
+//         }
+//       });
+//     };
 
-    const updateLayout = () => {
-      const isSmallScreen = window.innerWidth < 1024;
+//     const updateLayout = () => {
+//       const isSmallScreen = window.innerWidth < 1024;
 
-      if (isSmallScreen) {
-        tabHeader.classList.add("hidden");
-        tabAccordians.classList.remove("hidden")
-        // Accordion behavior
-        tabContents.forEach((content) => content.classList.add("hidden"));
-        handleSmallScreen();
-      } else {
-        tabHeader.classList.remove("hidden");
-        tabAccordians.classList.add("hidden")
+//       if (isSmallScreen) {
+//         tabHeader.classList.add("hidden");
+//         tabAccordians.classList.remove("hidden")
+//         // Accordion behavior
+//         tabContents.forEach((content) => content.classList.add("hidden"));
+//         handleSmallScreen();
+//       } else {
+//         tabHeader.classList.remove("hidden");
+//         tabAccordians.classList.add("hidden")
        
-        // Tabs behavior
-        tabContents.forEach((content) => content.classList.add("hidden"));
-        handleLargeScreen();
-      }
-    };
+//         // Tabs behavior
+//         tabContents.forEach((content) => content.classList.add("hidden"));
+//         handleLargeScreen();
+//       }
+//     };
 
-    // Initialize layout and resize listener
-    updateLayout();
-    window.addEventListener("resize", updateLayout);
-  });
+//     // Initialize layout and resize listener
+//     updateLayout();
+//     window.addEventListener("resize", updateLayout);
+//   });
 
 // end tabs
 (function ($) {

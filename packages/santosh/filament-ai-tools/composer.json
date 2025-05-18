@@ -1,0 +1,24 @@
+{
+    "name": "santosh/filament-ai-tools",
+    "description": "Filament AI Content Generator with OpenAI Integration",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0",
+        "openai-php/laravel": "^0.11.0",
+        "filament/filament": "^3.0",
+        "illuminate/support": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Santosh\\FilamentAiTools\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Santosh\\FilamentAiTools\\FilamentAiToolsServiceProvider"
+            ]
+        }
+    }
+}

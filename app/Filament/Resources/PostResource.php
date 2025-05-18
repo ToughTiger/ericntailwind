@@ -3,14 +3,13 @@
 namespace App\Filament\Resources;
 
 
-use Illuminate\Support\Facades\Log;
-use Livewire\TemporaryUploadedFile;
+
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Models\Post;
-
 use Carbon\CarbonImmutable;
 use Filament\Forms;
+use Filament\Forms\Components\Actions;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Group;
@@ -18,6 +17,7 @@ use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
@@ -31,9 +31,16 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Livewire\Component as LivewireComponent;
+use Livewire\TemporaryUploadedFile;
+use OpenAI\Laravel\Facades\OpenAI;
+use Santosh\FilamentAiTools\Forms\Components\AiContentGenerator;
+use Santosh\FilamentAiTools\Http\Livewire\ContentGenerator;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 class PostResource extends Resource
 {
 
@@ -50,20 +57,28 @@ class PostResource extends Resource
                     ->schema([
                         Section::make("Create Post")
                             ->description("Create a new post here.")
-                            ->schema([//
+                            ->schema([ //
                                 TextInput::make('title')
-                                ->required()
-                                ->maxLength(55)
-                                ->live(onBlur: true)
-                                ->afterStateUpdated(function(string $operation, string $state, Forms\Set $set){
-                                    $set('slug', Str::slug($state));
-                                }),
+                                    ->required()
+                                    ->maxLength(55)
+                                    ->live(onBlur: true)
+                                    ->afterStateUpdated(function (string $operation, string $state, Forms\Set $set) {
+                                        $set('slug', Str::slug($state));
+                                    }),
                                 TextInput::make('slug')->unique(ignoreRecord: true)
                                     ->minLength(1)
                                     ->maxLength(55)
                                     ->readOnly(),
-                                Forms\Components\MarkdownEditor::make('content')
+
+                                AiContentGenerator::make('content-generator')
+                                    ->targetField('content')
+                                    ->columnSpanFull(),
+                                MarkdownEditor::make('content')
                                     ->columnSpan('full')
+                                    ->required()
+                                    ->hiddenLabel()
+                                    ->reactive()
+                                    ->extraAttributes(['class' => 'prose max-w-none']),                        
                             ])->columns(2),
                         Section::make("Meta")
                             ->description('SEO Metadata')
@@ -108,9 +123,9 @@ class PostResource extends Resource
                             ]),
                         Section::make("Image Upload")
                             ->description('Upload an image for images and set Alt tag')
-                            ->Schema([                             
-                                FileUpload::make('image')  
-                                    ->disk('public')    
+                            ->Schema([
+                                FileUpload::make('image')
+                                    ->disk('public')
                                     ->directory('form-attachments')
                                     ->preserveFilenames()
                                     ->image()
@@ -120,16 +135,15 @@ class PostResource extends Resource
                                     ->previewable()
                                     ->loadingIndicatorPosition('right')
                                     ->panelLayout('integrated'),
-                                                                   
+
                                 TextInput::make('alt'),
 
-                            ])->collapsible(),                           
+                            ])->collapsible(),
 
                     ]),
 
 
             ])->columns(3);
-
     }
 
     public static function table(Table $table): Table
@@ -181,7 +195,6 @@ class PostResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-
     }
 
     public static function getRelations(): array
@@ -199,10 +212,9 @@ class PostResource extends Resource
             'edit' => Pages\EditPost::route('/{record}/edit'),
         ];
     }
-//    public static function getEloquentQuery(): Builder
-//    {
-////        dd(auth()->user()->is_admin);
-////        return parent::getEloquentQuery()->where('author_id', Auth::id() );
-//    }
+    //    public static function getEloquentQuery(): Builder
+    //    {
+    ////        dd(auth()->user()->is_admin);
+    ////        return parent::getEloquentQuery()->where('author_id', Auth::id() );
+    //    }
 }
-

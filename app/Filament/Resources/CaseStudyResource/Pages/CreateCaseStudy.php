@@ -9,4 +9,11 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateCaseStudy extends CreateRecord
 {
     protected static string $resource = CaseStudyResource::class;
+
+     protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['author_id'] = auth()->id();
+
+        return $data;
+    }
 }

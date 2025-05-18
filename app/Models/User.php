@@ -51,6 +51,11 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(Post::class);
     }
 
+       public function caseStudies(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(related: CaseStudy::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

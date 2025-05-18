@@ -22,7 +22,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/oncology.jpg" alt="oncology" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/oncology.webp" alt="oncology" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
@@ -39,13 +39,13 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/cardiovascular.jpg" alt="cardiovascular" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/cardiovascular.webp" alt="cardiovascular" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
                 <div class="w-full lg:w-1/2 px-4 lg:pr-20 lg:pt-4 order-1 lg:order-0">
                     <span class="inline-block py-1 px-3 uppercase text-xs font-semibold bg-blue-50 rounded-full text-blue-600">Neurology</span>
-                    <h3 class="my-4 text-xl md:text-2xl font-bold font-heading uppercase"><a href="blog-single.html">Neurology Research
+                    <h3 class="my-4 text-xl md:text-2xl font-bold font-heading uppercase"><a href="#">Neurology Research
                     </a></h3>
                     <p class="mb-4 text-sm md:text-base leading-loose text-blueGray-400">With deep expertise in neurodegenerative and neurological disorders—including Alzheimer’s disease, Parkinson’s disease, multiple sclerosis, and epilepsy—we drive innovation through advanced clinical trials. Our neurology studies leverage integrated ePRO, EDC, and remote monitoring technologies to enhance data quality, patient engagement, and cost efficiency.</p>
                     <!-- <a class="text-xs font-semibold text-blue-600" href="#">
@@ -56,7 +56,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/neurology.jpg" alt="neurology" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/neurology.webp" alt="neurology" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
@@ -74,7 +74,7 @@
                     </a>
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/infectious.jpg" alt="dermatology" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/infectious.webp" alt="dermatology" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
@@ -94,7 +94,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/derma.jpg" alt="dermatology" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/derma.webp" alt="dermatology" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
@@ -112,7 +112,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/vaccine.png" alt="rare_disease" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/vaccine.webp" alt="rare_disease" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
@@ -146,7 +146,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0 lg:order-1">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/medical_devices.png" alt="Medical Decives" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/medical_devices.webp" alt="Medical Decives" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
@@ -165,7 +165,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/digital.jpg" alt="digital therapy" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/digital.webp" alt="digital therapy" />
                 </div>
             </div>
             

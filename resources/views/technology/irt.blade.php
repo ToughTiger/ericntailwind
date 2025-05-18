@@ -32,9 +32,9 @@
         </div>
       </div>
   </section>
-  <section class="py-20 services_tab">
+  <section class="py-10 services_tab">
     <div class="container">
-      <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
+      <div class="flex lg:flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
         <div class="w-full lg:pr-20 lg:pt-4 order-1 lg:order-0">
           <div class='card p-4  rounded-lg shadow-xl'>
             <h3 class='px-4 py-6 text-white text-2xl uppercase font-bold text-center'>Features</h3>
@@ -208,26 +208,38 @@
                 </ul>
               </div>
               <!-- Tabs -->
-              <div class="flex min-h-screen items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-                <div class="w-full mx-auto">
+            
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+      
+  </section>
+  <section class="bg-blue-400">
+    <div class="flex min-h-screen items-center justify-center py-8 mx-6 lg:px-8 container">
+                <div class="w-full lg:mx-auto">
 
                   <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
-                    <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <ul class="flex lg:flex-wrap sm:px-4" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                       <li class="mr-2" role="presentation">
                         <button
-                          class="inline-block text-white font-bold hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-xl text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
+                          class="inline-block text-white lg:font-bold sm:font-xs hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 sm:text-xs text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
                           id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
                           aria-selected="true">IWRS</button>
                       </li>
                       <li class="mr-2" role="presentation">
                         <button
-                          class="inline-block text-white hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-xl font-bold text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                          class="inline-block text-white lg:font-bold sm:font-xs hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 sm:px-0 sm:text-xs text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
                           id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
                           aria-controls="dashboard" aria-selected="false">Stock Management</button>
                       </li>
                       <li class="mr-2" role="presentation">
                         <button
-                          class="inline-block text-white hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-xl font-bold text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                          class="inline-block text-white lg:font-bold sm:font-xs hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 sm:px-0 sm:text-xs text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
                           id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
                           aria-controls="settings" aria-selected="false">Regulatory Compliance</button>
                       </li>
@@ -482,12 +494,5 @@
                 <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
 
               </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
   </section>
 </x-layout>

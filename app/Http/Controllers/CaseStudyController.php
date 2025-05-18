@@ -34,8 +34,8 @@ class CaseStudyController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone' => 'nullable|string|max:255',
-            'company' => 'nullable|string|max:255',
+            'phone' => 'required|string|max:255',
+            'case_study_id' =>'required|string|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -43,14 +43,14 @@ class CaseStudyController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-
+           
         // Record the download
         CaseStudyDownload::create([
-            'case_study_id' => $caseStudy->id,
+           
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'company' => $request->company,
+             'case_study_id' => $request->case_study_id,
             'ip_address' => $request->ip(),
         ]);
 

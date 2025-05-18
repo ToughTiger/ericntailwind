@@ -104,7 +104,7 @@ a {
 }
 img, svg {
     height: auto;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 :not(svg) {
     transform-origin: 0px 0px;
@@ -1139,5 +1139,94 @@ details[open] summary ~ * {
     font-weight: 600;
     letter-spacing: 1.28px;
   }
+
+
+  .markdown-content {
+    font-family: 'Inter', sans-serif; /* Or match your app's default font */
+    line-height: 1.75;
+    color: #333;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #072ac2;
+}
+
+.markdown-content p {
+    margin-bottom: 1rem;
+}
+
+
+
+.markdown-content ul {
+   @apply list-none p-0 m-0;
+}
+.markdown-content ul li{
+  @apply flex items-center gap-2;
+  padding-left: 0; 
+  list-style: none; 
+}
+.markdown-content ul li::before {
+  content: "";
+  display: inline-block;
+  background: url('../imgs/icons/gear.svg') no-repeat center center; 
+  background-size: contain;
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+  vertical-align: middle;   
+  animation: eric-rotate 10s linear infinite;
+}
+.markdown-content li > p {
+  @apply m-0 p-0;
+  display: inline;
+   line-height: 1.5;
+}
+
+
+.markdown-content blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    color: #555;
+    margin: 1rem 0;
+    font-style: italic;
+    background-color: #f8f9f9;
+}
+
+.markdown-content pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.markdown-content code {
+    background-color: #f2f2f2;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.social-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.social-container li {
+  margin: 0 1em;
+}
+
+.social-container .social-button {
+  height: 2em;
+  width: 2em;
+ 
+}
 
  

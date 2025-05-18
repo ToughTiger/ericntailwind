@@ -32,8 +32,16 @@ class FeaturedResource extends Resource
                     ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->label('Image')
+                    ->disk('public')
                     ->directory('featured/images')
-                    ->image(),
+                    ->preserveFilenames()
+                    ->image()
+                    ->imageEditor()
+                    ->visibility('public')
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif'])
+                    ->previewable()
+                    ->loadingIndicatorPosition('right')
+                    ->panelLayout('integrated'),
                 Forms\Components\TextInput::make('link')
                     ->label('Link')
                     ->url(),

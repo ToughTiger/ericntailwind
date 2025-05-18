@@ -42,4 +42,10 @@ return [
         'service_account_path' => storage_path('ericsolutions-94bb180c4550.json'),
     ],
 
+    
+    // 'open_api' =>[
+    //     'openai_api_key' => env('OPENAI_API_KEY', ''),
+    // ],
+    
+
 ];

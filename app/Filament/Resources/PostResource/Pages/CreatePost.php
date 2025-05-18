@@ -4,7 +4,9 @@ namespace App\Filament\Resources\PostResource\Pages;
 
 use App\Filament\Resources\PostResource;
 use Filament\Actions;
+use Filament\Actions\Action;
 use Filament\Resources\Pages\CreateRecord;
+use OpenAI\Laravel\Facades\OpenAI;
 
 class CreatePost extends CreateRecord
 {
@@ -15,4 +17,7 @@ class CreatePost extends CreateRecord
 
         return $data;
     }
+
+
+
 }

@@ -4,6 +4,7 @@ use App\Providers\AppServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
+
 return [
 
     /*
@@ -172,6 +173,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
+        \Santosh\FilamentAiTools\FilamentAiToolsServiceProvider::class,
     ])->toArray(),
 
     /*

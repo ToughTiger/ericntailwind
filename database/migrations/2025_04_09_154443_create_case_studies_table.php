@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('case_studies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable(); // Foreign key for the user
+            $table->unsignedBigInteger('author_id'); // Foreign key for the user
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description');
             $table->boolean('is_published')->default(false);
-            $table->string('pdf_path')->nullable();
-            $table->string('thumbnail_path')->nullable();
+            $table->string('pdf_path');
+            $table->string('thumbnail_path');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
         });
        
     }

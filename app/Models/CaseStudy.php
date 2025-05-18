@@ -11,6 +11,7 @@ class CaseStudy extends Model
     use HasFactory;
 
     protected $fillable = [
+        'author_id',
         'title',
         'slug',
         'description',
@@ -18,6 +19,11 @@ class CaseStudy extends Model
         'pdf_path',
         'thumbnail_path',
     ];
+
+      public function author(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
     public function downloads()
     {
         return $this->hasMany(CaseStudyDownload::class);
