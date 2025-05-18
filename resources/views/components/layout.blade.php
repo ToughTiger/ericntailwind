@@ -51,6 +51,7 @@
 integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
 crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css?v=2.0') }}" />
+      <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
 </head>
 
 <body class="bg-white text-body font-body">

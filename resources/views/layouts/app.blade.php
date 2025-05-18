@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ URL::asset('assets/css/tailwind-built.css?v=2.0') }}" />
         <!-- <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" /> -->
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head> 
     <body class="bg-white text-body font-body">
