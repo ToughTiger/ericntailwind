@@ -1,4 +1,11 @@
 <x-layout>
+
+<meta property="og:title" content="{{ $post->title }}" />
+<meta property="og:description" content="{{ $post->excerpt }}" />
+<meta property="og:image" content="{{ asset('storage/' . $post->image) }}" />
+<meta property="og:url" content="{{ url('posts/' . $post->slug) }}" />
+<meta property="og:type" content="article" />
+
     <section class="pb-20">
         <div class="pt-20 pb-8 mb-12 bg-cover bg-no-repeat">
             <div class="container">

@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Tag;
+use Share;
 
 class PostController extends Controller
 {
@@ -25,7 +26,7 @@ class PostController extends Controller
             ->with(['categories', 'tags', ])->first();
             // ->with(['categories', 'tags', 'comments', 'comments.replies'])->first(); for future implementation
 
-              $share_buttons = \Share::page('https://ericsolutions.com/posts/'.$post->slug)
+              $share_buttons = \Share::page('https://ericsolutions.com/posts/'.$post->slug, $post->title)
             ->facebook()
             ->twitter()
             ->linkedin()
