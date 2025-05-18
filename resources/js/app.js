@@ -1,9 +1,9 @@
 import './bootstrap';
 
 import Alpine from 'alpinejs';
-import Livewire from 'laravel-livewire';
+// import Livewire from 'laravel-livewire';
 
-window.Livewire = Livewire;
+// window.Livewire = Livewire;
 
 window.Alpine = Alpine;
 
