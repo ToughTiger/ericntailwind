@@ -112,7 +112,7 @@
                     </a> -->
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mb-8 order-0">
-                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/vaccine.webp" alt="rare_disease" />
+                    <img class="h-80 w-full object-cover rounded" src="assets/imgs/illustrations/Vaccine.webp" alt="rare_disease" />
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4 mb-12 wow animate__animated animate__fadeIn animated hover-up-5">
