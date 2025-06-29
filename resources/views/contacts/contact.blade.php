@@ -52,7 +52,7 @@
                             </label>
                         </div>
                         <button class="transition duration-300 ease-in-out transform hover:-translate-y-1 block w-full p-4 text-center text-xs text-white font-semibold leading-none bg-blue-500 hover:bg-blue-700 rounded">Sign In</button>
-                        <p class="my-6 text-xs text-blueGray-400 text-center font-semibold">or continue with</p>
+                        <!-- <p class="my-6 text-xs text-blueGray-400 text-center font-semibold">or continue with</p>
                         <button class="transition duration-300 ease-in-out transform hover:-translate-y-1 flex items-center w-full px-4 py-3 mb-2 text-xs text-blueGray-500 font-semibold leading-none border border-gray-200 hover:bg-blueGray-50 rounded" href="#">
                             <img class="h-6 pr-10" src="assets/imgs/logos/facebook-sign.svg" />
                             <span>Sign In with Facebook</span>
@@ -60,12 +60,12 @@
                         <button class="transition duration-300 ease-in-out transform hover:-translate-y-1 flex items-center px-4 py-3 w-full text-xs text-blueGray-500 font-semibold leading-none border border-gray-200 hover:bg-blueGray-50 rounded" href="#">
                             <img class="h-6 pr-10" src="assets/imgs/logos/google-sign.svg" />
                             <span>Sign In with Google</span>
-                        </button>
+                        </button> -->
                     </div>
 
-                    <div class="w-full mt-12 mx-auto text-center">
+                    <!-- <div class="w-full mt-12 mx-auto text-center">
                         <p>Don't Have an Account? <a class="inline-block text-xs text-blue-600 hover:text-blue-700 font-semibold leading-none wow animate__animated animate__fadeIn animated" data-wow-delay=".1s" href="signup.html">Sign Up now</a></p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

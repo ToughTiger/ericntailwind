@@ -1,7 +1,7 @@
 <x-layout>
 <section class="hero-1">
         <div class="container px-4 sm:px-6 lg:px-8 text-center py-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Why Eric Solutions</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Why Eric Solutions?</h1>
             <div class="text-xl md:text-3xl font-light mb-8 space-y-2">
                 <div class="flex justify-center items-center space-x-4">
                     <span class="bg-white/20 px-4 py-2 rounded-lg text-blue-800  font-bold backdrop-blur-sm">Innovation</span>
