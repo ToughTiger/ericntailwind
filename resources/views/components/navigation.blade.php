@@ -2,7 +2,7 @@
     <div class="container bg-transparent">
         <div class="flex justify-between pt-5">
             <span></span>
-            <div class="language-picker language-picker--flags js-language-picker" data-trigger-class="li4-btn li4-btn--subtle js-tab-focus">
+            <!-- <div class="language-picker language-picker--flags js-language-picker" data-trigger-class="li4-btn li4-btn--subtle js-tab-focus">
                 <form action="" class="language-picker__form">
                     <label for="language-picker-select">Select your language</label>
 
@@ -20,7 +20,7 @@
 
                     </select>
                 </form>
-            </div>
+            </div> -->
         </div>
         <nav class="bg-transparent flex justify-between items-center py-1">
             <a class="text-3xl font-semibold leading-none" href="/">
@@ -132,10 +132,10 @@
                 </li>
                 <li class="pt-4 pb-4"><a class="text-sm font-semibold text-white hover:text-blueGray-500" href="/contact">Contact</a></li>
             </ul>
-            <div class="hidden lg:block">
+            <!-- <div class="hidden lg:block">
                 <a class="btn-accent hover-up-2" href="login.html">Log In</a>
                 {{-- <a class="btn-primary hover-up-2" href="signup.html">Sign Up</a>--}}
-            </div>
+            </div> -->
             <div class="lg:hidden">
                 <button class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
                     <svg class="fill-current h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -240,7 +240,7 @@
             </ul>
             <div class="mt-4 pt-6 border-t border-blueGray-100">
 
-                <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a>
+                <!-- <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a> -->
             </div>
         </div>
         <div class="mt-auto">

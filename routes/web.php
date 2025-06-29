@@ -115,6 +115,7 @@ Route::get('/case-studies/{slug}', [CaseStudyController::class, 'show'])
 Route::post('/case-studies/{caseStudy}/download', [CaseStudyController::class, 'download'])
     ->name('case-studies.download');
 
+    Route::get('/why_eric', [IndexController::class, 'why_eric']);
 
 // Cookeies Routes
 

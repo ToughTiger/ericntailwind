@@ -4,10 +4,9 @@
     
 				<div class="container">
 					<h2 class="text-3xl lg:text-4xl mb-8 font-bold font-heading">Our Blog</h2>
-					<div class="flex flex-wrap -mx-3">
-						
+					<div class="flex flex-wrap -mx-3 ">						
 						@foreach ($posts as $post)
-						<div class="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated hover-up-5" data-wow-delay=".1s">
+						<div class="w-full lg:w-1/3 p-3 bg-gray-100 mr-3 mb-12 wow animate__animated animate__fadeInUp animated hover-up-5 border border-gray-100 rounded" data-wow-delay=".1s">
 							<a href="{{'posts/'. $post->slug }}">
 								<img class="h-80 w-full object-cover rounded" src="{{asset('storage/'.$post->image) }}" alt="{{   $post->title }}">
 								<p class="mt-6 text-sm text-blue-400">

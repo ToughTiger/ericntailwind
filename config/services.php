@@ -43,9 +43,9 @@ return [
     ],
 
     
-    // 'open_api' =>[
-    //     'openai_api_key' => env('OPENAI_API_KEY', ''),
-    // ],
+    'open_api' =>[
+        'openai_api_key' => env('OPENAI_API_KEY', ''),
+    ],
     
 
 ];

@@ -54,6 +54,15 @@ public function gdpr(){
         $metaDescription = '';
         return view('aitech/protocol');
     }
+
+    public function why_eric(){
+        $meta = [
+            'title' => 'Why Eric Solutions | Clinical Trial Excellence',
+            'keywords' => 'Eric Solutions advantages, clinical trial expertise, EDC and CTMS solutions, clinical trial management benefits',
+            'description' => 'Discover why Eric Solutions is your trusted partner for clinical trial management with our expertise in EDC, CTMS, and more.'
+        ];
+        return view('why_eric', compact('meta'));
+    }
     // public function blog(){
     //     $posts = Post::orderBy('created_at', 'desc')
     //     ->limit(3)

@@ -20,7 +20,7 @@
                             </svg>Register Now</a>
                
             <a class="block sm:inline-block hover-up-2 py-4 px-8 text-xs text-blueGray-600 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded wow animate__animated animate__fadeInUp"
-              data-wow-delay=".3s" href="#how-we-work">Why Eric?</a>
+              data-wow-delay=".3s" href="/why_eric">Why Eric?</a>
           </div>
         </div>
         <div class="w-full lg:w-3/5 px-3 mb-12 lg:mb-0 ">
@@ -622,7 +622,7 @@
         @foreach($posts as $post)
         <div class="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated hover-up-5"
           data-wow-delay=".1s">
-          <a href="#">
+          <a href="{{'posts/'. $post->slug }}" class="block bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition duration-300">
             <img class="h-80 w-full object-cover rounded" src="{{asset('storage/'.$post->image)}}" alt="{{$post->title}}">
             <p class="mt-6 text-sm text-blue-400">
               @if($post->is_featured)
