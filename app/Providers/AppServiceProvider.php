@@ -6,7 +6,7 @@ use Filament\Facades\Filament;
 use Filament\Navigation\NavigationGroup;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
-
+use Livewire\Livewire;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
         if (app()->environment('production')) {
             URL::forceScheme('https');
         }
+        Livewire::component('anthropic-generator', \App\Http\Livewire\AnthropicGenerator::class);
     }
 }

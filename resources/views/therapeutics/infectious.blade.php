@@ -7,7 +7,7 @@
             muted
             playsinline
             class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="https://d2fbnqxqb0c7i4.cloudfront.net/infectious.mp4" type="video/mp4" />
+            <source src="https://d2fbnqxqb0c7i4.cloudfront.net/Dashboards.jpeg" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
 

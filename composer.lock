@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "762e2a04dee19d6e97f67097f84c3499",
+    "content-hash": "4e7ae9df511af4447d330fc26237b82f",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -6719,7 +6719,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/santosh/filament-ai-tools",
-                "reference": "dd5d2922c21cc079720a97cedb10544986744ce8"
+                "reference": "894b63199c60f41c0a05d07ab180a1a4cf082efc"
             },
             "require": {
                 "filament/filament": "^3.0",
@@ -6730,6 +6730,9 @@
             },
             "type": "library",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "dev-main"
+                },
                 "laravel": {
                     "providers": [
                         "Santosh\\FilamentAiTools\\FilamentAiToolsServiceProvider"

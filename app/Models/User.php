@@ -56,6 +56,17 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(related: CaseStudy::class);
     }
 
+    public function linkedInPosts()
+        {
+        return $this->hasMany(\App\Models\LinkedInPost::class);
+        }
+
+
+        public function hasLinkedIn(): bool
+        {
+        return ! empty($this->linkedin_access_token) && ! empty($this->linkedin_urn);
+        }
+
     /**
      * The attributes that should be hidden for serialization.
      *

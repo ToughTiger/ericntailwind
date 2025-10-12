@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('linkedin_access_token')->nullable();
             $table->string('linkedin_refresh_token')->nullable();
             $table->timestamp('linkedin_token_expires_at')->nullable();
-            $table->string('linkedin_user_id')->nullable();
+            $table->string('linkedin_urn')->nullable(); // e.g. urn:li:person:xxxx
             $table->string('linkedin_name')->nullable();
             $table->timestamps();
         });

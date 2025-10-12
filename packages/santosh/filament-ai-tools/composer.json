@@ -15,10 +15,13 @@
         }
     },
     "extra": {
+        "branch-alias": {
+          "dev-master": "dev-main"
+        },
         "laravel": {
-            "providers": [
-                "Santosh\\FilamentAiTools\\FilamentAiToolsServiceProvider"
-            ]
+          "providers": [
+            "Santosh\\FilamentAiTools\\FilamentAiToolsServiceProvider"
+          ]
         }
-    }
+      }
 }

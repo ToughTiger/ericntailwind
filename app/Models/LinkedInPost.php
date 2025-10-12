@@ -1,50 +1,53 @@
 <?php
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Bus;
+use App\Jobs\PublishLinkedInPostJob;
 
 class LinkedInPost extends Model
 {
-    protected $fillable = [
-        'user_id',
-        'content',
-        'media_path',
-        'media_type',
-        'status',
-        'linkedin_post_id',
-        'scheduled_for',
-    ];
+use HasFactory;
 
-    protected $casts = [
-        'scheduled_for' => 'datetime',
-    ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+protected $fillable = [
+'user_id','content','media_path','media_type','status','scheduled_for','visibility','owner_urn','external_post_urn','retries','last_error'
+];
 
-    public function publishToLinkedIn()
-    {
-        try {
-            $linkedInService = app(\App\Services\LinkedInService::class);
-            
-            $response = $linkedInService->postContent(
-                $this->user,
-                $this->content,
-                $this->media_path,
-                $this->media_type
-            );
 
-            $this->update([
-                'status' => 'published',
-                'linkedin_post_id' => $response['id'],
-            ]);
+protected $casts = [
+'scheduled_for' => 'datetime',
+];
 
-            return true;
-        } catch (\Exception $e) {
-            $this->update(['status' => 'failed']);
-            throw $e;
-        }
-    }
+
+public function user(): BelongsTo
+{
+return $this->belongsTo(User::class);
+}
+
+
+public function scopeDue($query)
+{
+return $query->whereIn('status', ['draft','queued','failed'])
+->whereNotNull('scheduled_for')
+->where('scheduled_for', '<=', now());
+}
+
+
+public function queueForPublish(): void
+{
+$this->update(['status' => 'queued']);
+Bus::dispatch(new PublishLinkedInPostJob($this));
+}
+
+
+// For Filament "Publish Now" button
+public function publishToLinkedIn(): void
+{
+$this->scheduled_for = now();
+$this->save();
+$this->queueForPublish();
+}
 }

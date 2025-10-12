@@ -43,8 +43,10 @@ return [
     ],
 
     
-    'open_api' =>[
-        'openai_api_key' => env('OPENAI_API_KEY', ''),
+    'anthropic' => [
+        'key'   => env('ANTHROPIC_API_KEY'),
+        'model' => env('ANTHROPIC_MODEL', 'claude-sonnet-4-20250514'),
+        'base_uri' => env('ANTHROPIC_BASE_URI', 'https://api.anthropic.com/v1'),
     ],
     
 

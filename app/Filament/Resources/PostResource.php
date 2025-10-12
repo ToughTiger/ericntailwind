@@ -3,7 +3,7 @@
 namespace App\Filament\Resources;
 
 
-
+use Filament\Forms\Components\View;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
 use App\Models\Post;
@@ -70,15 +70,15 @@ class PostResource extends Resource
                                     ->maxLength(55)
                                     ->readOnly(),
 
-                                AiContentGenerator::make('content-generator')
-                                    ->targetField('content')
+                                View::make('filament.components.anthropic-generator')
                                     ->columnSpanFull(),
                                 MarkdownEditor::make('content')
-                                    ->columnSpan('full')
-                                    ->required()
-                                    ->hiddenLabel()
-                                    ->reactive()
-                                    ->extraAttributes(['class' => 'prose max-w-none']),                        
+                                ->columnSpan('full')
+                                ->required()
+                                ->hiddenLabel()
+                                ->reactive()
+                                ->extraAttributes(['class' => 'prose max-w-none']),
+                                                        
                             ])->columns(2),
                         Section::make("Meta")
                             ->description('SEO Metadata')
@@ -87,10 +87,10 @@ class PostResource extends Resource
                                     ->helperText("Enter keywords that capture the blog's essence"),
                                 TextInput::make('meta_description')
                                     ->helperText("Enter description about the blog's essence"),
-                                Select::make('Category')
-                                    ->relationship('categories', 'name')
-                                    ->preload()
-                                    ->multiple()
+                                    Select::make('Category')
+                                        ->relationship('categories', 'name')
+                                        ->preload()
+                                        ->multiple()
                                     ->searchable(),
                                 Select::make("Tags")
                                     ->relationship('tags', 'name')
