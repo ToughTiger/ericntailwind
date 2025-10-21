@@ -10,10 +10,16 @@ class Kernel extends ConsoleKernel
     /**
      * Define the application's command schedule.
      */
-    protected function schedule(Schedule $schedule): void
+    protected function schedule(\Illuminate\Console\Scheduling\Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
-        $schedule->command('linkedin:publish-scheduled')->everyMinute();
+        $schedule->call(function () {
+            \App\Models\LinkedInPost::query()
+                ->due() // your scopeDue
+                ->whereIn('status', ['draft', 'failed'])
+                ->limit(100)
+                ->get()
+                ->each->queueForPublish();
+        })->everyMinute();
     }
 
     /**

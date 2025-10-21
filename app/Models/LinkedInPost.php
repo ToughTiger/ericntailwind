@@ -13,12 +13,22 @@ use HasFactory;
 
 
 protected $fillable = [
-'user_id','content','media_path','media_type','status','scheduled_for','visibility','owner_urn','external_post_urn','retries','last_error'
+    'user_id',
+    'content',
+    'media_path',
+    'media_type',       // e.g. text|image|article
+    'status',           // draft|queued|published|failed
+    'scheduled_for',
+    'visibility',       // PUBLIC|CONNECTIONS, etc.
+    'owner_urn',        // if you store a per-post override; otherwise use user's linkedin_urn
+    'external_post_urn',
+    'retries',
+    'last_error',
 ];
 
-
 protected $casts = [
-'scheduled_for' => 'datetime',
+    'scheduled_for' => 'datetime',
+    'retries'       => 'integer',
 ];
 
 
@@ -38,16 +48,15 @@ return $query->whereIn('status', ['draft','queued','failed'])
 
 public function queueForPublish(): void
 {
-$this->update(['status' => 'queued']);
-Bus::dispatch(new PublishLinkedInPostJob($this));
+    $this->update(['status' => 'queued']);
+    PublishLinkedInPostJob::dispatch($this->id)->onQueue('linkedin');
 }
 
 
 // For Filament "Publish Now" button
 public function publishToLinkedIn(): void
 {
-$this->scheduled_for = now();
-$this->save();
-$this->queueForPublish();
+    $this->forceFill(['scheduled_for' => now()])->save();
+    $this->queueForPublish();
 }
 }
