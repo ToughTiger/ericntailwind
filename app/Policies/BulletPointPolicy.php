@@ -33,12 +33,12 @@ class BulletPointPolicy
 
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_' . $this->key());
+        return $user->can('view_any_bulletpoint');
     }
 
     public function view(User $user, BulletPoint $model): bool
     {
-        return $user->can('view_' . $this->key());
+        return $user->can('view_bulletpoint');
     }
 
     public function create(User $user): bool
@@ -48,46 +48,46 @@ class BulletPointPolicy
 
     public function update(User $user, BulletPoint $model): bool
     {
-        return $user->can('update_' . $this->key());
+        return $user->can('update_bulletpoint');
     }
 
     public function delete(User $user, BulletPoint $model): bool
     {
-        return $user->can('delete_' . $this->key());
+        return $user->can('delete_bulletpoint');
     }
 
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_' . $this->key());
+        return $user->can('delete_any_bulletpoint');
     }
 
     public function forceDelete(User $user, BulletPoint $model): bool
     {
-        return $user->can('force_delete_' . $this->key());
+        return $user->can('force_delete_bulletpoint');
     }
 
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_' . $this->key());
+        return $user->can('force_delete_any_bulletpoint');
     }
 
     public function restore(User $user, BulletPoint $model): bool
     {
-        return $user->can('restore_' . $this->key());
+        return $user->can('restore_bulletpoint');
     }
 
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_' . $this->key());
+        return $user->can('restore_any_bulletpoint');
     }
 
     public function replicate(User $user, BulletPoint $model): bool
     {
-        return $user->can('replicate_' . $this->key());
+        return $user->can('replicate_bulletpoint');
     }
 
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_' . $this->key());
+        return $user->can('reorder_bulletpoint');
     }
 }
