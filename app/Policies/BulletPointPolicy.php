@@ -33,12 +33,12 @@ class BulletPointPolicy
 
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_bulletpoint');
+        return $user->can('view_any_bullet_point');
     }
 
     public function view(User $user, BulletPoint $model): bool
     {
-        return $user->can('view_bulletpoint');
+        return $user->can('view_bullet_point');
     }
 
     public function create(User $user): bool
@@ -48,46 +48,46 @@ class BulletPointPolicy
 
     public function update(User $user, BulletPoint $model): bool
     {
-        return $user->can('update_bulletpoint');
+        return $user->can('update_bullet_point');
     }
 
     public function delete(User $user, BulletPoint $model): bool
     {
-        return $user->can('delete_bulletpoint');
+        return $user->can('delete_bullet_point');
     }
 
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_bulletpoint');
+        return $user->can('delete_any_bullet_point');
     }
 
     public function forceDelete(User $user, BulletPoint $model): bool
     {
-        return $user->can('force_delete_bulletpoint');
+        return $user->can('force_delete_bullet_point');
     }
 
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_bulletpoint');
+        return $user->can('force_delete_any_bulle_tpoint');
     }
 
     public function restore(User $user, BulletPoint $model): bool
     {
-        return $user->can('restore_bulletpoint');
+        return $user->can('restore_bullet_point');
     }
 
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_bulletpoint');
+        return $user->can('restore_any_bullet_point');
     }
 
     public function replicate(User $user, BulletPoint $model): bool
     {
-        return $user->can('replicate_bulletpoint');
+        return $user->can('replicate_bullet_point');
     }
 
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_bulletpoint');
+        return $user->can('reorder_bullet_point');
     }
 }
