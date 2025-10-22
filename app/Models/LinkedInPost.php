@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Bus;
 use App\Jobs\PublishLinkedInPostJob;
+use App\Models\User;
+
 
 class LinkedInPost extends Model
 {

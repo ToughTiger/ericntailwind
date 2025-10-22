@@ -16,7 +16,7 @@ class LinkedInPostPolicy
         return null;
     }
 
-    protected function key(): string { return 'linkedinpost'; }
+    protected function key(): string { return 'linked_in_post'; }
 
     public function viewAny(User $user): bool { return $user->can('view_any_'.$this->key()); }
     public function view(User $user, LinkedInPost $m): bool { return $user->can('view_'.$this->key()); }
