@@ -28,7 +28,7 @@ class CaseStudyPolicy
      */
     protected function key(): string
     {
-        return 'case_study';
+        return 'casestudy';
     }
 
     public function viewAny(User $user): bool
