@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Services\LinkedInService; // Ensure this is the correct namespace for LinkedInService
 use App\Models\User; // Assuming you have a User model
 use App\Filament\Resources\LinkedInConnectionResource;
+
 class LinkedInController extends Controller
 {
 
