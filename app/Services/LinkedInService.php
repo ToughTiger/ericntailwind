@@ -66,81 +66,91 @@ class LinkedInService
     }
 
     public function postContent(User $user, string $content, ?string $mediaPath = null, ?string $mediaType = null): array
-    {
-        $accessToken = $user->linkedin_access_token;
-        $authorUrn = $user->linkedin_urn;
+{
+    $accessToken = $user->linkedin_access_token;
+    $authorUrn   = $user->linkedin_urn;
 
-        $postData = [
-            'author' => $authorUrn,
-            'lifecycleState' => 'PUBLISHED',
-            'specificContent' => [
-                'com.linkedin.ugc.ShareContent' => [
-                    'shareCommentary' => [
-                        'text' => $content,
-                    ],
-                    'shareMediaCategory' => $mediaType ? strtoupper($mediaType) : 'NONE',
-                ],
-            ],
-            'visibility' => [
-                'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC',
-            ],
-        ];
-
-        if ($mediaPath && $mediaType) {
-            $mediaAsset = $this->uploadMedia($user, $mediaPath, $mediaType);
-            
-            $postData['specificContent']['com.linkedin.ugc.ShareContent']['media'] = [
-                [
-                    'status' => 'READY',
-                    'media' => $mediaAsset,
-                ],
-            ];
-        }
-
-        $response = Http::withHeaders([
-            'Authorization' => "Bearer {$accessToken}",
-            'Content-Type' => 'application/json',
-            'X-Restli-Protocol-Version' => '2.0.0',
-        ])->post('https://api.linkedin.com/v2/ugcPosts', $postData);
-
-        return $response->json();
+    if (!$accessToken || !$authorUrn) {
+        throw new \RuntimeException('Missing LinkedIn token or URN. Reconnect first.');
     }
 
-    protected function uploadMedia(User $user, string $mediaPath, string $mediaType): string
-    {
-        $accessToken = $user->linkedin_access_token;
-        $fileContents = Storage::get($mediaPath);
-        $mimeType = Storage::mimeType($mediaPath);
-
-        // Register upload
-        $registerResponse = Http::withHeaders([
-            'Authorization' => "Bearer {$accessToken}",
-            'Content-Type' => 'application/json',
-            'X-Restli-Protocol-Version' => '2.0.0',
-        ])->post('https://api.linkedin.com/v2/assets?action=registerUpload', [
-            'registerUploadRequest' => [
-                'recipes' => [
-                    "urn:li:digitalmediaRecipe:feedshare-{$mediaType}",
-                ],
-                'owner' => "urn:li:person:{$user->linkedin_user_id}",
-                'serviceRelationships' => [
-                    [
-                        'relationshipType' => 'OWNER',
-                        'identifier' => 'urn:li:userGeneratedContent',
-                    ],
-                ],
+    $payload = [
+        'author'         => $authorUrn,
+        'lifecycleState' => 'PUBLISHED',
+        'specificContent' => [
+            'com.linkedin.ugc.ShareContent' => [
+                'shareCommentary'    => ['text' => $content],
+                'shareMediaCategory' => $mediaType ? strtoupper($mediaType) : 'NONE',
             ],
+        ],
+        'visibility' => [
+            'com.linkedin.ugc.MemberNetworkVisibility' => 'PUBLIC',
+        ],
+    ];
+
+    if ($mediaPath && $mediaType) {
+        $asset = $this->uploadMedia($user, $mediaPath, $mediaType);
+        $payload['specificContent']['com.linkedin.ugc.ShareContent']['media'] = [[
+            'status' => 'READY',
+            'media'  => $asset,
+        ]];
+    }
+
+    try {
+        return Http::withHeaders([
+            'Authorization' => "Bearer {$accessToken}",
+            'Content-Type'  => 'application/json',
+            'X-Restli-Protocol-Version' => '2.0.0',
+        ])->post('https://api.linkedin.com/v2/ugcPosts', $payload)->throw()->json();
+    } catch (\Illuminate\Http\Client\RequestException $e) {
+        \Log::error('LinkedIn post failed', [
+            'status' => optional($e->response)->status(),
+            'body'   => optional($e->response)->json() ?? optional($e->response)->body(),
         ]);
-
-        $uploadUrl = $registerResponse->json()['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl'];
-        $asset = $registerResponse->json()['value']['asset'];
-
-        // Upload file
-        Http::withHeaders([
-            'Authorization' => "Bearer {$accessToken}",
-        ])->withBody($fileContents, $mimeType)
-          ->put($uploadUrl);
-
-        return $asset;
+        throw $e;
     }
+}
+
+
+protected function uploadMedia(User $user, string $mediaPath, string $mediaType): string
+{
+    if (!$user->linkedin_urn) {
+        throw new \RuntimeException('Missing linkedin_urn — reconnect to LinkedIn.');
+    }
+
+    $recipe = strtolower($mediaType); // 'image' or 'video'
+    if (!in_array($recipe, ['image','video'], true)) {
+        throw new \InvalidArgumentException("Unsupported mediaType '{$mediaType}'. Use 'image' or 'video'.");
+    }
+
+    $bytes = \Storage::get($mediaPath);
+    $mime  = \Storage::mimeType($mediaPath) ?? 'application/octet-stream';
+
+    $register = Http::withHeaders([
+        'Authorization' => "Bearer {$user->linkedin_access_token}",
+        'Content-Type'  => 'application/json',
+        'X-Restli-Protocol-Version' => '2.0.0',
+    ])->post('https://api.linkedin.com/v2/assets?action=registerUpload', [
+        'registerUploadRequest' => [
+            'recipes' => ["urn:li:digitalmediaRecipe:feedshare-{$recipe}"],
+            'owner'   => $user->linkedin_urn, // use URN
+            'serviceRelationships' => [[
+                'relationshipType' => 'OWNER',
+                'identifier'       => 'urn:li:userGeneratedContent',
+            ]],
+        ],
+    ])->throw()->json();
+
+    $uploadUrl = data_get($register, 'value.uploadMechanism.com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest.uploadUrl');
+    $asset     = data_get($register, 'value.asset');
+
+    if (!$uploadUrl || !$asset) {
+        throw new \RuntimeException('registerUpload did not return uploadUrl/asset.');
+    }
+
+    Http::withBody($bytes, $mime)->put($uploadUrl)->throw();
+
+    return $asset;
+}
+
 }

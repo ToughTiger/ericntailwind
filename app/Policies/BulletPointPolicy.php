@@ -28,7 +28,7 @@ class BulletPointPolicy
      */
     protected function key(): string
     {
-        return 'bulletpoint';
+        return 'bullet_point';
     }
 
     public function viewAny(User $user): bool
