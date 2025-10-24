@@ -13,6 +13,7 @@
 >
     <head>
         {{ \Filament\Support\Facades\FilamentView::renderHook('panels::head.start') }}
+        <meta name="x-filament-debug" content="base-override-ok">
 
         <meta charset="utf-8" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
