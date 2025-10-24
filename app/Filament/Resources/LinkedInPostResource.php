@@ -12,7 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Notifications\Notification;
+use Illuminate\Support\Facades\Log;
 class LinkedInPostResource extends Resource
 {
     protected static ?string $model = LinkedInPost::class;
@@ -87,9 +88,42 @@ class LinkedInPostResource extends Resource
             ])
             ->actions([
                 Tables\Actions\Action::make('publish')
-                    ->label('Publish Now')
-                    ->action(fn ($record) => $record->publishToLinkedIn())
-                    ->hidden(fn ($record) => $record->status === 'published'),
+    ->label('Publish Now')
+    ->action(function (LinkedInPost $record): void {
+        try {
+            // If this throws, we’ll catch it and show the message.
+            $record->publishToLinkedIn();
+
+            // If your model method doesn’t set status itself, do it here:
+            // $record->update(['status' => 'published', 'error_message' => null]);
+
+            Notification::make()
+                ->title('Published')
+                ->success()
+                ->send();
+        } catch (\Throwable $e) {
+            Log::error('LinkedIn publish failed', [
+                'post_id' => $record->id,
+                'message' => $e->getMessage(),
+            ]);
+
+            // Optional but very helpful:
+            if ($record->isFillable('error_message')) {
+                $record->forceFill([
+                    'status' => 'failed',
+                    'error_message' => $e->getMessage(),
+                ])->save();
+            } else {
+                $record->update(['status' => 'failed']);
+            }
+
+            Notification::make()
+                ->title('Publish failed')
+                ->body($e->getMessage())
+                ->danger()
+                ->send();
+        }
+    })->hidden(fn (LinkedInPost $record) => $record->status === 'published'),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
