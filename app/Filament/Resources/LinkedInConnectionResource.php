@@ -48,7 +48,12 @@ class LinkedInConnectionResource extends Resource
                     ->label('Connected')
                     ->boolean()
                     ->getStateUsing(fn ($record) => $record->linkedin_access_token !== null),
-            ])
+                Tables\Columns\TextColumn::make('linkedin_token_expires_at')
+                    ->label('Token Expires')
+                    ->dateTime()
+                    ->since()             // shows “in 2 days” etc.
+                    ->sortable(),
+                     ])
             ->filters([
                 //
             ])
@@ -56,7 +61,7 @@ class LinkedInConnectionResource extends Resource
                 Tables\Actions\Action::make('connect')
                     ->label(fn ($record) => $record->linkedin_access_token ? 'Reconnect' : 'Connect')
                     ->url(fn ($record) => route('linkedin.auth', ['user' => $record->id]))
-                    ->hidden(fn ($record) => $record->linkedin_access_token !== null),
+                    ->openUrlInNewTab(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
