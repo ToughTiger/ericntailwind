@@ -2,46 +2,69 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Auth;
-use App\Services\LinkedInService; // Ensure this is the correct namespace for LinkedInService
-use App\Models\User; // Assuming you have a User model
 use App\Filament\Resources\LinkedInConnectionResource;
+use App\Models\User;
+use App\Services\LinkedInService;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class LinkedInController extends Controller
 {
-
-    public function redirect(User $user)
+    /**
+     * Start OAuth — do a HARD redirect to LinkedIn (no Socialite, no XHR).
+     * Route: GET /linkedin/auth/{user}
+     */
+    public function redirect(User $user, LinkedInService $svc)
     {
         // allow self or admins
-        abort_unless(Auth::id() === $user->id || Auth::user()->can('update', $user), 403);
+        abort_unless(
+            Auth::id() === $user->id || (Auth::check() && Auth::user()->can('update', $user)),
+            403
+        );
 
-        // use the exact URL you registered in LinkedIn portal
-        $callback = env('LINKEDIN_REDIRECT_URI', url('/linkedin/callback'));
-
-        // If you're using the classic Socialite LinkedIn driver:
-        return Socialite::driver('linkedin')                   // <- keep this 'linkedin' if your config key is services.linkedin
-            ->redirectUrl($callback)                           // <- forces exact redirect_uri
-            ->scopes(app(LinkedInService::class)->getScopes()) // ['r_liteprofile','w_member_social', …]
-            ->with(['state' => (string) $user->id])            // pass your user id for mapping later
-            ->redirect();
+        // Build the proper LinkedIn URL (scopes + exact redirect) and leave the app.
+        return redirect()->away($svc->getAuthUrl($user));
     }
-    public function handleCallback(Request $request, LinkedInService $linkedInService)
+
+    /**
+     * OAuth callback — exchange code for tokens, fetch profile, save to user.
+     * Route: GET /linkedin/callback
+     */
+    public function handleCallback(Request $request, LinkedInService $svc)
     {
+        // LinkedIn will return ?code=...&state={your_user_id}
         $request->validate([
-            'code'  => ['required'],
-            'state' => ['required','exists:users,id'],
+            'code'  => ['required', 'string'],
+            'state' => ['required', 'integer', 'exists:users,id'],
         ]);
 
-        $user = User::findOrFail($request->state);
+        $user = User::findOrFail($request->integer('state'));
 
-        // Exchange code → tokens, fetch profile (OIDC userinfo), save on user
-        $linkedInService->handleCallback($request->code, $user);
+        try {
+            $svc->handleCallback($request->string('code')->toString(), $user);
 
-        // Redirect to the Filament resource index (panel-aware)
-        return redirect(LinkedInConnectionResource::getUrl('index'))
-            ->with('success', 'Successfully connected with LinkedIn!');
+            // Optional: Filament toast
+            \Filament\Notifications\Notification::make()
+                ->title('LinkedIn connected')
+                ->success()
+                ->send();
+
+            return redirect(LinkedInConnectionResource::getUrl('index'));
+        } catch (\Throwable $e) {
+            Log::error('LinkedIn OAuth callback failed', [
+                'user_id' => $user->id,
+                'err'     => $e->getMessage(),
+            ]);
+
+            \Filament\Notifications\Notification::make()
+                ->title('Failed to connect LinkedIn')
+                ->body('Please try again. If it persists, recheck your app keys & redirect URI.')
+                ->danger()
+                ->send();
+
+            return redirect(LinkedInConnectionResource::getUrl('index'))
+                ->with('error', 'LinkedIn connection failed. Please try again.');
+        }
     }
 }

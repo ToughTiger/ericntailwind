@@ -87,13 +87,16 @@ require __DIR__ . '/auth.php';
 /**
  * LinkedIn OAuth
  */
-Route::get('/linkedin/auth/{user}', function (User $user) {
-    $linkedInService = app(LinkedInService::class);
-    return redirect($linkedInService->getAuthUrl($user));
-})->name('linkedin.auth');
+Route::middleware(['web','auth'])->group(function () {
+    // Full-page redirect to LinkedIn (no XHR)
+    Route::get('/linkedin/auth/{user}', [LinkedInController::class, 'redirect'])
+        ->name('linkedin.auth')
+        ->whereNumber('user');
 
-Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback'])
-    ->name('linkedin.callback');
+    // OAuth callback
+    Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback'])
+        ->name('linkedin.callback');
+});
 
 /**
  * Case Studies (downloads)

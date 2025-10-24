@@ -61,7 +61,14 @@ class LinkedInConnectionResource extends Resource
                 Tables\Actions\Action::make('connect')
                     ->label(fn ($record) => $record->linkedin_access_token ? 'Reconnect' : 'Connect')
                     ->url(fn ($record) => route('linkedin.auth', ['user' => $record->id]))
-                    ->openUrlInNewTab(),
+                    ->openUrlInNewTab()
+                    ->extraAttributes([
+                        // ensure Livewire navigate never hijacks this link
+                        'wire:navigate' => 'false',
+                        'data-navigate' => 'false',
+                        'rel' => 'noopener noreferrer',
+                        'target' => '_blank', // belt & suspenders
+                    ]),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
