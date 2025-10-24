@@ -50,6 +50,12 @@
             }
         </style>
 
+    <style>
+        [x-cloak] { display: initial !important; }
+        html, body { opacity: 1 !important; }
+    </style>
+
+
         @filamentStyles
 
         {{ filament()->getTheme()->getHtml() }}
