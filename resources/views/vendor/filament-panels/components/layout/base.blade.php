@@ -121,6 +121,23 @@
 
         {{ \Filament\Support\Facades\FilamentView::renderHook('panels::scripts.before') }}
 
+        <script data-navigate-once>
+document.addEventListener('DOMContentLoaded', function () {
+  // Show anything that is stuck behind x-cloak (even if Alpine never starts)
+  document.querySelectorAll('[x-cloak],[x-cloak=""],[x-cloak="1"],[x-cloak="x-cloak"],[x-cloak="-lg"],[x-cloak="lg"]')
+    .forEach(function (el) { el.removeAttribute('x-cloak'); });
+
+  // If some global CSS set opacity:0 anywhere, undo it:
+  try {
+    document.documentElement.style.opacity = '';
+    document.body.style.opacity = '';
+    document.documentElement.style.visibility = 'visible';
+    document.body.style.visibility = 'visible';
+  } catch (e) {}
+});
+</script>
+
+
         @filamentScripts(withCore: true)
 
         @if (config('filament.broadcasting.echo'))
