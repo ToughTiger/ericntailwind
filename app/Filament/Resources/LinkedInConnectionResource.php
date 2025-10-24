@@ -66,8 +66,8 @@ class LinkedInConnectionResource extends Resource
                         // ensure Livewire navigate never hijacks this link
                         'wire:navigate' => 'false',
                         'data-navigate' => 'false',
-                        'rel' => 'noopener noreferrer',
-                        'target' => '_blank', // belt & suspenders
+                        'data-turbo'    => 'false',
+                        'data-no-swup'  => 'true',
                     ]),
                 Tables\Actions\EditAction::make(),
             ])

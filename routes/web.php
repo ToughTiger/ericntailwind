@@ -89,12 +89,12 @@ require __DIR__ . '/auth.php';
  */
 Route::middleware(['web','auth'])->group(function () {
     // Full-page redirect to LinkedIn (no XHR)
-    Route::get('/linkedin/auth/{user}', [LinkedInController::class, 'redirect'])
+    Route::get('/linkedin/auth/{user}', [\App\Http\Controllers\LinkedInController::class, 'redirect'])
         ->name('linkedin.auth')
         ->whereNumber('user');
 
     // OAuth callback
-    Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback'])
+    Route::get('/linkedin/callback', [\App\Http\Controllers\LinkedInController::class, 'handleCallback'])
         ->name('linkedin.callback');
 });
 
