@@ -89,41 +89,40 @@ class LinkedInPostResource extends Resource
             ->actions([
                 Tables\Actions\Action::make('publish')
     ->label('Publish Now')
-    ->action(function (LinkedInPost $record): void {
+    ->action(function ($record) {
         try {
-            // If this throws, we’ll catch it and show the message.
-            $record->publishToLinkedIn();
+            app(LinkedInService::class)->postContent(
+                $record->user,         // or auth()->user()
+                $record->content,
+                $record->media_path,
+                $record->media_type
+            );
 
-            // If your model method doesn’t set status itself, do it here:
-            // $record->update(['status' => 'published', 'error_message' => null]);
+            $record->status = 'published';
+            $record->last_error = null; // add this column on posts if you have it
+            $record->save();
 
             Notification::make()
-                ->title('Published')
+                ->title('Published to LinkedIn')
                 ->success()
                 ->send();
         } catch (\Throwable $e) {
-            Log::error('LinkedIn publish failed', [
-                'post_id' => $record->id,
-                'message' => $e->getMessage(),
-            ]);
+            // DO NOT rethrow — keep UI stable
+            $record->status = 'failed';
+            $record->last_error = $e->getMessage();
+            $record->save();
 
-            // Optional but very helpful:
-            if ($record->isFillable('error_message')) {
-                $record->forceFill([
-                    'status' => 'failed',
-                    'error_message' => $e->getMessage(),
-                ])->save();
-            } else {
-                $record->update(['status' => 'failed']);
-            }
+            // store on user too if you want
+            optional($record->user)->update(['linkedin_error_message' => $e->getMessage()]);
 
             Notification::make()
-                ->title('Publish failed')
-                ->body($e->getMessage())
+                ->title('LinkedIn publish failed')
+                ->body(Str::limit($e->getMessage(), 300))
                 ->danger()
                 ->send();
         }
-    })->hidden(fn (LinkedInPost $record) => $record->status === 'published'),
+    })
+    ->visible(fn ($record) => $record->status !== 'published'),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
