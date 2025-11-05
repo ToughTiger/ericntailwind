@@ -20,22 +20,61 @@ class LinkedInConnectionResource extends Resource
     protected static ?string $navigationGroup = 'Linkedin';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    // public static function form(Form $form): Form
+    // {
+    //     return $form
+    //         ->schema([
+    //             Forms\Components\TextInput::make('name')
+    //             ->label('Name')
+    //             ->required()
+    //             ->maxLength(255),
+    //             Forms\Components\TextInput::make('linkedin_name')
+    //                 ->label('LinkedIn Name')
+    //                 ->maxLength(255),
+    //             Forms\Components\Toggle::make('has_linkedin')
+    //                 // ->label('Connected to LinkedIn')
+    //                 // ->disabled()
+    //                 // ->dehydrated(false)
+    //                 ->afterStateHydrated(function ($component, $record) {
+    //                     $component->state(! empty($record->linkedin_access_token));
+    //                 }),
+    //             Forms\Components\TextInput::make('linkedin_urn')
+    //                 ->label('LinkedIn URN')
+    //                 ->disabled()
+    //                 ->dehydrated(false),
+    //         ]);
+    // }
+
     public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('linkedin_name')
-                    ->label('LinkedIn Name')
-                    ->disabled(),
-                Forms\Components\Toggle::make('has_linkedin')
-                    ->label('Connected to LinkedIn')
-                    ->disabled()
-                    ->dehydrated(false)
-                    ->afterStateHydrated(function ($component, $record) {
-                        $component->state($record->linkedin_access_token !== null);
-                    }),
-            ]);
-    }
+{
+    return $form
+        ->schema([
+            // Example: allow editing of name and LinkedIn display name
+            Forms\Components\TextInput::make('name')
+                ->label('Name')
+                ->required()
+                ->maxLength(255),
+
+            Forms\Components\TextInput::make('linkedin_name')
+                ->label('LinkedIn Name')
+                ->maxLength(255), // <-- remove ->disabled()
+
+            // Show connection state, but don't save it
+            Forms\Components\Toggle::make('has_linkedin')
+                ->label('Connected to LinkedIn')
+                ->disabled()           // readonly in UI
+                ->dehydrated(false)    // don't save to DB
+                ->afterStateHydrated(function ($component, $record) {
+                    $component->state(! empty($record->linkedin_access_token));
+                }),
+
+            // (Optional) show URN/read-only fields
+            Forms\Components\TextInput::make('linkedin_urn')
+                ->label('LinkedIn URN')
+                ->disabled()
+                ->dehydrated(false),
+        ]);
+}
 
     public static function table(Table $table): Table
     {
@@ -67,7 +106,8 @@ class LinkedInConnectionResource extends Resource
                         'wire:navigate' => 'false',
                         'data-navigate' => 'false',
                         'data-turbo'    => 'false',
-                        'data-no-swup'  => 'true',
+                        'onclick'       => "window.location.href=this.href; return false;", // hard fallback
+                        'rel'           => 'noopener external',
                     ]),
                 Tables\Actions\EditAction::make(),
             ])

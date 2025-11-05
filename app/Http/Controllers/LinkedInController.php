@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
+
 class LinkedInController extends Controller
 {
     /**
@@ -22,9 +23,10 @@ class LinkedInController extends Controller
             Auth::id() === $user->id || (Auth::check() && Auth::user()->can('update', $user)),
             403
         );
-
+        $authUrl = $svc->getAuthUrl($user);
         // Build the proper LinkedIn URL (scopes + exact redirect) and leave the app.
-        return redirect()->away($svc->getAuthUrl($user));
+        // return redirect()->away($svc->getAuthUrl($user));
+        return response()->view('oauth/redirect-away', ['url' => $authUrl]);
     }
 
     /**

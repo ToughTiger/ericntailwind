@@ -42,6 +42,12 @@ class FeaturedResource extends Resource
                     ->previewable()
                     ->loadingIndicatorPosition('right')
                     ->panelLayout('integrated'),
+                // Forms\Components\TextInput::make('image')
+                // ->label('Image')
+                // ->placeholder('Enter image URL or filename')
+                // ->maxLength(255)
+                // ->suffixIcon('heroicon-m-photo'),
+
                 Forms\Components\TextInput::make('link')
                     ->label('Link')
                     ->url(),
