@@ -109,7 +109,7 @@ class LinkedInConnectionResource extends Resource
                         'onclick'       => "window.location.href=this.href; return false;", // hard fallback
                         'rel'           => 'noopener external',
                     ]),
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
