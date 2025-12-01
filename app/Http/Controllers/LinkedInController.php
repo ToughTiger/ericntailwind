@@ -33,8 +33,10 @@ class LinkedInController extends Controller
      * OAuth callback — exchange code for tokens, fetch profile, save to user.
      * Route: GET /linkedin/callback
      */
+   
     public function handleCallback(Request $request, LinkedInService $svc)
     {
+        \Log::info('HIT CALLBACK', $request->all());
         // LinkedIn will return ?code=...&state={your_user_id}
         $request->validate([
             'code'  => ['required', 'string'],
