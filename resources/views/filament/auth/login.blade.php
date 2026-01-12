@@ -4,15 +4,16 @@
         {{ __('Login') }}
     </x-slot>
 
-    {{-- Filament login form --}}
-    {{ $this->form }}
+    <x-filament-panels::form wire:submit="authenticate">
+        {{-- Filament login form --}}
+        {{ $this->form }}
 
-    {{-- Filament default actions (Login button etc.) --}}
-    <x-filament-panels::form.actions
-        :actions="$this->getFormActions()"
-        :full-width="$this->hasFullWidthFormActions()"
-        class="mt-4"
-    />
+        {{-- Filament default actions (Login button etc.) --}}
+        <x-filament-panels::form.actions
+            :actions="$this->getCachedFormActions()"
+            :full-width="$this->hasFullWidthFormActions()"
+        />
+    </x-filament-panels::form>
 
     {{-- Add our Forgot Password link --}}
     <div class="mt-4 text-right">

@@ -327,7 +327,7 @@
     </div>
   </section>
 
-  <section class="py-0 xl:bg-contain bg-top bg-no-repeat">
+  <section class="dynamic py-0 xl:bg-contain bg-top bg-no-repeat">
     <div class="mx-auto mb-12 text-center container mt-32 sm:mt-8 ">
       @if ($featured->isEmpty())
       <p>No Featured Data</p>
@@ -372,11 +372,15 @@
 
       </div>
     </div>
-    <div class="container h-auto w-full mx-auto flex flex-wrap items-center justify-center ">
+    <div class="container mx-auto px-4 py-12 flex flex-col items-center justify-center">
       @foreach ($featured as $item)
-      <img src="{{asset('storage/'.$item->image) }}" alt="{{ $item->title }}">
+      <div class="w-full max-w-xl mb-8">
+        <img src="{{asset('storage/'.$item->image) }}" 
+             alt="{{ $item->title }}"
+             class="w-full max-w-xl h-auto object-cover rounded-lg shadow-lg max-h-[100px]">
+      </div>
+      <h2 class="text-center text-2xl md:text-3xl font-bold font-heading text-blue-800">{{ $item->title }}</h2>
       @endforeach
-        <h2 class="text-center mt-8 mb-8 font-bold font-heading">{{ $item->title }}</h2>
     </div>
   
 
