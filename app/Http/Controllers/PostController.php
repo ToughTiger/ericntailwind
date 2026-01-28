@@ -19,14 +19,13 @@ class PostController extends Controller
             ->simplePaginate(6);
         return view('blog.blogPost', ['posts' => $posts]);
     }
-    public function singlePost($slug): \Illuminate\Contracts\View\View
+    public function singlePost(Post $post): \Illuminate\Contracts\View\View
     {     
+        // Post is now injected via route model binding
+        $post->load(['categories', 'tags']);
+        // ->with(['categories', 'tags', 'comments', 'comments.replies'])->first(); for future implementation
 
-        $post = Post::where('slug', $slug)
-            ->with(['categories', 'tags', ])->first();
-            // ->with(['categories', 'tags', 'comments', 'comments.replies'])->first(); for future implementation
-
-              $share_buttons = \Share::page('https://ericsolutions.com/posts/'.$post->slug, $post->title)
+        $share_buttons = \Share::page('https://ericsolutions.com/posts/'.$post->slug, $post->title)
             ->facebook()
             ->twitter()
             ->linkedin()

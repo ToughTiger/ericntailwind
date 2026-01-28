@@ -9,4 +9,3 @@
         :columns="$this->getFooterWidgetsColumns()"
     />
 </x-filament-panels::page>
-

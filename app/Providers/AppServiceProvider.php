@@ -26,5 +26,8 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
         Livewire::component('anthropic-generator', \App\Http\Livewire\AnthropicGenerator::class);
+        
+        // Register observers
+        \App\Models\Post::observe(\App\Observers\PostObserver::class);
     }
 }

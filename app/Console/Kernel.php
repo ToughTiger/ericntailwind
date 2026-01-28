@@ -12,6 +12,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(\Illuminate\Console\Scheduling\Schedule $schedule)
     {
+        // Publish scheduled blog posts every minute
+        $schedule->command('posts:publish-scheduled')->everyMinute();
+
+        // LinkedIn scheduled posts
         $schedule->call(function () {
             \App\Models\LinkedInPost::query()
                 ->due() // your scopeDue

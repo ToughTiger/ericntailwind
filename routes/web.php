@@ -43,8 +43,8 @@ Route::get('/dashboard', fn () => view('dashboard'))
  * Blog / Posts
  */
 Route::prefix('posts')->group(function () {
-    Route::get('/', [PostController::class, 'index']);
-    Route::get('{slug}', [PostController::class, 'singlePost']);
+    Route::get('/', [PostController::class, 'index'])->name('blog.index');
+    Route::get('{post:slug}', [PostController::class, 'singlePost'])->name('blog.show');
 });
 
 /**
