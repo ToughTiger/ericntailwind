@@ -145,6 +145,7 @@ class PostResource extends Resource
                                 ]),
                                     
                                 Select::make('Category')
+                                    ->label('Campaign')
                                     ->relationship('categories', 'name')
                                     ->preload()
                                     ->multiple()
