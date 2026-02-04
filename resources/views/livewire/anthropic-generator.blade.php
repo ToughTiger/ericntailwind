@@ -83,12 +83,47 @@
         <label class="flex items-center gap-2"><input type="checkbox" x-model="include_howto"> <span>Include HowTo</span></label>
         <label class="flex items-center gap-2"><input type="checkbox" x-model="include_tldr"> <span>Include TL;DR</span></label>
 
-        <button type="button" class="ml-auto px-4 py-2 border border-gray-300 bg-white text-gray-900
-       dark:border-gray-600 dark:bg-gray-800 dark:text-white" x-bind:disabled="loading" x-on:click="$wire.generate()">
-            <span x-show="!loading">Generate</span>
-            <span x-show="loading">Generating…</span>
+        <button type="button" class="ml-auto px-4 py-2 rounded-lg font-semibold transition-all duration-200
+            dark:border-gray-600" 
+            x-bind:class="loading ? 'bg-blue-400 text-white cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white'"
+            x-bind:disabled="loading" 
+            x-on:click="$wire.generate()">
+            <span x-show="!loading" class="flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                Generate Post
+            </span>
+            <span x-show="loading" class="flex items-center gap-2">
+                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Generating...
+            </span>
         </button>
     </div>
+    
+    <!-- Loading Progress Indicator -->
+    <template x-if="loading">
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+            <div class="flex items-center gap-3">
+                <svg class="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <div class="flex-1">
+                    <div class="font-semibold text-blue-900 dark:text-blue-100">Generating your content...</div>
+                    <div class="text-sm text-blue-700 dark:text-blue-300 mt-1">
+                        This may take 30-60 seconds. Analyzing competitors and crafting your post.
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 bg-blue-200 dark:bg-blue-800 rounded-full h-2 overflow-hidden">
+                <div class="bg-blue-600 h-full animate-pulse" style="width: 100%"></div>
+            </div>
+        </div>
+    </template>
 
     <!-- Preview Panel -->
     <template x-if="out_title || out_content_md">
@@ -144,14 +179,22 @@
 
     <!-- Fill Filament inputs when user confirms -->
     <script>
+        // Log when component loads
+        console.log('Anthropic Generator Component Loaded');
+        
         window.addEventListener('ai-post-generated', (e) => {
+            console.log('AI Post Generated Event:', e.detail);
             const d = e.detail || {};
             const setVal = (name, val) => {
                 const el = document.querySelector(`[name="${name}"]`);
-                if (!el) return;
+                if (!el) {
+                    console.warn(`Field not found: ${name}`);
+                    return;
+                }
                 el.value = val ?? '';
                 el.dispatchEvent(new Event('input', { bubbles: true }));
                 el.dispatchEvent(new Event('change', { bubbles: true }));
+                console.log(`Set ${name}:`, val?.substring(0, 50) + '...');
             };
             setVal('title', d.title);
             setVal('keywords', d.keywords);
@@ -159,10 +202,32 @@
             setVal('content', d.content);
             setVal('featured_snippet', d.featured_snippet);
         });
+        
+        // Debug: Log loading state changes
+        document.addEventListener('livewire:load', function () {
+            Livewire.hook('message.processed', (message, component) => {
+                if (component.el.querySelector('[x-data]')) {
+                    console.log('Livewire message processed');
+                }
+            });
+        });
     </script>
 
     <!-- Error -->
     <template x-if="error">
-        <div class="text-red-600" x-text="error"></div>
+        <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+            <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div class="flex-1">
+                    <div class="font-semibold text-red-900 dark:text-red-100">Generation Failed</div>
+                    <div class="text-sm text-red-700 dark:text-red-300 mt-1" x-text="error"></div>
+                    <div class="mt-2 text-xs text-red-600 dark:text-red-400">
+                        💡 Tip: Check your browser console and Laravel logs (storage/logs/laravel.log) for more details.
+                    </div>
+                </div>
+            </div>
+        </div>
     </template>
 </div>

@@ -270,15 +270,25 @@ PROMPT;
             $model  = config('services.anthropic.model', 'claude-3-5-sonnet-20240620');
             $base   = rtrim(config('services.anthropic.base_uri', 'https://api.anthropic.com/v1'), '/');
 
+            Log::info('Starting post generation', [
+                'api_key_set' => !empty($apiKey),
+                'model' => $model,
+                'base_uri' => $base,
+                'title' => $this->title,
+                'keyword' => $this->primary_keyword
+            ]);
+
             if ($apiKey === '') {
-                throw new \Exception('Anthropic API key not configured.');
+                throw new \Exception('Anthropic API key not configured. Please set ANTHROPIC_API_KEY in your .env file.');
             }
 
             // 1) Competitors
+            Log::info('Analyzing competitors', ['urls' => $this->competitorUrls]);
             $competitorData = $this->analyzeCompetitors();
 
             // 2) Prompt
             $instruction = $this->buildInstruction($competitorData);
+            Log::info('Built instruction', ['length' => strlen($instruction)]);
 
             // 3) API call
             $payload = [
@@ -289,6 +299,7 @@ PROMPT;
                 ],
             ];
 
+            Log::info('Sending request to Anthropic API');
             $response = Http::withHeaders([
                 'x-api-key' => $apiKey,
                 'anthropic-version' => '2023-06-01',
@@ -297,11 +308,17 @@ PROMPT;
             ])->timeout(120)->post("{$base}/messages", $payload);
 
             if ($response->failed()) {
-                Log::error('Anthropic API error', ['status' => $response->status(), 'body' => $response->body()]);
-                throw new \Exception('Anthropic API returned an error: ' . $response->status());
+                $errorBody = $response->body();
+                Log::error('Anthropic API error', [
+                    'status' => $response->status(), 
+                    'body' => $errorBody,
+                    'headers' => $response->headers()
+                ]);
+                throw new \Exception('Anthropic API error (' . $response->status() . '): ' . $errorBody);
             }
 
             $jsonResp = $response->json();
+            Log::info('Received response from Anthropic', ['has_content' => isset($jsonResp['content'])]);
 
             // Anthropic returns content as array of blocks [{type:'text', text:'...'}]
             $raw = '';
@@ -319,6 +336,8 @@ PROMPT;
                 $raw = json_encode($jsonResp);
             }
 
+            Log::info('Parsing response', ['raw_length' => strlen($raw)]);
+
             // 4) Parse front-matter + body
             $parsed = $this->parseFrontMatter($raw);
 
@@ -328,8 +347,17 @@ PROMPT;
             $this->out_featured    = $parsed['featured'] ?: null;
             $this->out_content_md  = $parsed['content'] ?: null;
 
+            Log::info('Generation complete', [
+                'has_title' => !empty($this->out_title),
+                'has_content' => !empty($this->out_content_md)
+            ]);
+
         } catch (\Throwable $e) {
             $this->error = $e->getMessage();
+            Log::error('Generation failed', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
             $this->resetOutput();
         } finally {
             $this->loading = false;
