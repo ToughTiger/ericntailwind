@@ -7,6 +7,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Spatie\Analytics\Period;
 
 class TopReferrersTable extends BaseWidget
@@ -25,20 +26,22 @@ class TopReferrersTable extends BaseWidget
         return null;
     }
 
-    public function getTableRecords(): array
+    public function getTableRecords(): Collection
     {
         try {
             $analyticsService = app(AnalyticsService::class);
             $referrers = $analyticsService->getTopReferrers(Period::days(30), 15);
 
-            return collect($referrers)->map(function ($referrer) {
+            $data = collect($referrers)->map(function ($referrer) {
                 return [
                     'url' => $referrer['url'] ?? 'Direct',
                     'pageViews' => $referrer['pageViews'] ?? 0,
                 ];
-            })->toArray();
+            });
+
+            return new Collection($data);
         } catch (\Exception $e) {
-            return [];
+            return new Collection([]);
         }
     }
 
