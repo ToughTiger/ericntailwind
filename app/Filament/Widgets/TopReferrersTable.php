@@ -25,7 +25,7 @@ class TopReferrersTable extends BaseWidget
         return null;
     }
 
-    protected function getTableRecords(): array
+    public function getTableRecords(): array
     {
         try {
             $analyticsService = app(AnalyticsService::class);
